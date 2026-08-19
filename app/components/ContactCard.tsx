@@ -19,12 +19,12 @@ export default function ContactCard() {
         <div className={styles.row}>
           <span className={styles.rowLabel}>LINKEDIN</span>
           <a
-            href="https://linkedin.com/in/kevinbdoyle"
+            href="https://www.linkedin.com/in/kbdoyle"
             target="_blank"
             rel="noreferrer"
             className={`${styles.link} link-underline`}
           >
-            linkedin.com/in/kevinbdoyle
+            linkedin.com/in/kbdoyle
           </a>
         </div>
         <div className={styles.seam} />
