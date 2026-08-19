@@ -1,0 +1,129 @@
+.section {
+  background: var(--surface);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: var(--space-12) 0 var(--space-13);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.columns {
+  display: flex;
+  gap: var(--space-10);
+  align-items: flex-start;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  width: 432px;
+  flex-shrink: 0;
+}
+
+.heading {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 39px;
+  letter-spacing: -0.68px;
+  color: var(--ink);
+}
+
+.body {
+  font-family: var(--font-body), sans-serif;
+  font-size: 17px;
+  line-height: 28px;
+  color: var(--muted);
+}
+
+.grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.cell,
+.cellActive {
+  background: var(--surface);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  position: relative;
+}
+
+.cellActive {
+  cursor: pointer;
+}
+
+.emptyCell {
+  background: var(--panel);
+}
+
+.comingSoon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-chip);
+  padding: var(--space-0, 4px) var(--space-2);
+  font-family: var(--font-body), sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.48px;
+  color: var(--muted);
+}
+
+.num {
+  font-family: var(--font-body), sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1.44px;
+  color: var(--muted);
+}
+
+.mutedLabel {
+  font-family: var(--font-body), sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--muted);
+}
+
+.linkLabel {
+  font-family: var(--font-body), sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--accent);
+}
+
+/* The whole tile is the click target, so the label's hover underline
+   (from the shared .link-underline class) triggers off the tile's own
+   hover/focus state rather than requiring the cursor over the text. */
+.cellActive:hover .linkLabel::after,
+.cellActive:focus-visible .linkLabel::after {
+  transform: scaleX(1);
+}
+
+@media (max-width: 900px) {
+  .columns {
+    flex-direction: column;
+  }
+  .intro {
+    width: 100%;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

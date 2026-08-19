@@ -1,0 +1,90 @@
+.card {
+  background: var(--surface);
+  border: var(--stroke-hairline) solid var(--line);
+  border-radius: var(--radius-card);
+  padding: var(--space-5) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  width: 100%;
+}
+
+.eyebrow {
+  font-family: var(--font-body), sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 1.65px;
+  color: var(--muted);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  width: 100%;
+}
+
+.label {
+  font-family: var(--font-body), sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 24px;
+  color: var(--ink);
+  width: 150px;
+  flex-shrink: 0;
+}
+
+.bars {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-0);
+}
+
+.barTrack {
+  width: 100%;
+}
+
+.barBefore {
+  height: 12px;
+  border-radius: var(--radius-chip);
+  background: var(--line-strong);
+}
+
+.barAfter {
+  height: 12px;
+  border-radius: var(--radius-chip);
+  background: var(--accent);
+}
+
+.delta {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--ink);
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.caption {
+  font-family: var(--font-body), sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--muted);
+  max-width: 504px;
+}
+
+@media (max-width: 900px) {
+  .row {
+    flex-wrap: wrap;
+  }
+  .label {
+    width: 100%;
+  }
+  .delta {
+    width: 100%;
+    text-align: left;
+  }
+}

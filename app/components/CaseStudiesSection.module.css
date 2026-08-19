@@ -1,0 +1,12 @@
+.section {
+  border-bottom: 1px solid var(--line-strong);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: var(--space-12) 0 var(--space-13);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+}

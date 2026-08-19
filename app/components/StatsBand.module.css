@@ -1,0 +1,92 @@
+.band {
+  position: relative;
+  background: var(--panel);
+  border-bottom: 1px solid var(--line-strong);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: var(--space-7);
+}
+
+.seamChip {
+  position: absolute;
+  top: -17px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-chip);
+  padding: var(--space-1) var(--space-4);
+  font-family: var(--font-display), sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 1.04px;
+  color: var(--ink);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-9);
+  padding-top: var(--space-10);
+}
+
+.grid {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+
+.cell {
+  flex: 1;
+  min-width: 0;
+  padding: 0 var(--space-7);
+}
+
+.cell:first-child {
+  padding-left: 0;
+}
+
+.cell:last-child {
+  padding-right: 0;
+}
+
+.divider {
+  width: 1px;
+  background: var(--line);
+  align-self: stretch;
+}
+
+.featureLink {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  width: 100%;
+}
+
+.rule {
+  height: 1px;
+  background: var(--line);
+  width: 100%;
+}
+
+.link {
+  font-family: var(--font-body), sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--accent);
+  align-self: center;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+  .cell {
+    padding: 0 !important;
+  }
+  .divider {
+    display: none;
+  }
+}

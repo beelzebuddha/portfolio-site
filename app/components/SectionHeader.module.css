@@ -1,0 +1,16 @@
+.header {
+  width: 100%;
+  border-bottom: 1px solid var(--ink);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-bottom: var(--space-4);
+}
+
+.label {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 2.1px;
+  color: var(--ink);
+}

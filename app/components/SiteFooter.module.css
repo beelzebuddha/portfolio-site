@@ -1,0 +1,29 @@
+.footer {
+  background: var(--panel);
+  width: 100%;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-8) var(--layout-page-padding);
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.wordmark {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: -0.15px;
+  color: var(--ink);
+}
+
+.tagline {
+  font-family: var(--font-body), sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1.44px;
+  color: var(--muted);
+}

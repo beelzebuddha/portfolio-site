@@ -1,0 +1,171 @@
+/* =========================================================================
+   DESIGN TOKENS
+   Mirrors the Figma file's three variable collections:
+   Primitives -> Theme (Light/Dark aliases) -> Scale
+
+   IMPORTANT: The values below are confirmed from a get_design_context pull
+   of the Home frame, which was captured with the file's Dark mode active.
+   Light-mode alias values were NOT part of that pull -- [data-theme="light"]
+   below is a placeholder and needs a real pull against the Light mode
+   variant before the toggle is trustworthy. Flagging rather than guessing.
+   ========================================================================= */
+
+:root {
+  /* --- Scale tokens (spacing / radius / stroke) --- */
+  --space-0: 4px;
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 18px;
+  --space-4: 20px;
+  --space-5: 24px;
+  --space-6: 28px;
+  --space-7: 32px;
+  --space-8: 40px;
+  --space-9: 56px;
+  --space-10: 64px;
+  --space-11: 80px;
+  --space-12: 88px;
+  --space-13: 96px;
+  --space-focus-offset: 2px;
+
+  --radius-control: 4px;
+  --radius-chip: 3px;
+  --radius-card: 5px;
+
+  --stroke-hairline: 1px;
+  --stroke-card: 1px;
+  --stroke-rule: 2px;
+  --stroke-emphasis: 3px;
+
+  --layout-page-padding: 40px;
+  --layout-max-width: 1160px;
+}
+
+/* --- Theme: Dark (confirmed) --- */
+[data-theme='dark'] {
+  --bg: #141210;
+  --surface: #1b1816;
+  --panel: #221e1b;
+  --ink: #f6f3f0;
+  --muted: #ada6a0;
+  --accent: #ffa85e;
+  --accent-ink: #1a1512;
+  --focus: var(--accent);
+  --line: #322c28;
+  --line-strong: #4a423c;
+  /* Corrected per the Mode Toggle component annotation: passes WCAG 1.4.11
+     at 3.39:1 (light) / 5.35:1 (dark) -- line-strong alone failed at 1.63:1 */
+  --line-control: #9a918a;
+}
+
+/* --- Theme: Light (PLACEHOLDER -- do not ship without a real pull) --- */
+[data-theme='light'] {
+  --bg: #f6f3f0;
+  --surface: #ffffff;
+  --panel: #ede8e3;
+  --ink: #1b1816;
+  --muted: #6b6560;
+  --accent: #c76a2e;
+  --accent-ink: #f6f3f0;
+  --focus: var(--accent);
+  --line: #ddd6ce;
+  --line-strong: #b8b0a6;
+  --line-control: #837a72;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+body {
+  font-family: var(--font-body), sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-display), sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Visible keyboard focus everywhere -- WCAG 2.4.7, per the Nav Item
+   component annotation (2px color/focus ring, outside align, 2px offset) */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Reusable animated hover underline for text links. Add alongside a
+   component's own class, e.g. `${styles.cta} link-underline`. Skip it on
+   links that already carry a persistent (non-hover) underline of their own.
+   `width: fit-content` keeps the underline's width tied to the link's own
+   content even when a flex-stretch parent would otherwise widen the box.
+   Reduced-motion users get the instant swap from the transition override
+   above instead of the animated slide. */
+.link-underline {
+  position: relative;
+  width: fit-content;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: calc(-1 * var(--space-focus-offset));
+  width: 100%;
+  height: var(--stroke-rule);
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.link-underline:hover::after,
+.link-underline:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--layout-max-width);
+  margin: 0 auto;
+  padding: 0 var(--layout-page-padding);
+}
+
+@media (max-width: 900px) {
+  :root {
+    --layout-page-padding: 20px;
+  }
+}
