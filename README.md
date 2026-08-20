@@ -27,6 +27,7 @@ Then open http://localhost:3000.
 - Shared `ContactCard` component factored out of the Home page's
   about/contact block so the Home page and About page render the identical
   email/LinkedIn/résumé card instead of two copies of the same markup.
+- Résumé PDF live at `/resume.pdf`, linked from the Contact card.
 - Case study, home, and about page images exported from Figma and served
   locally from `/public/images` — no more expiring
   `figma.com/api/mcp/asset/...` URLs.
@@ -42,13 +43,12 @@ Then open http://localhost:3000.
    `app/globals.css` was NOT pulled from the file — I don't have your real
    Light mode alias values yet. The toggle works, but the light palette is a
    guess. Say the word and I'll pull the Light mode variant and fix this.
-2. **Résumé PDF** is linked (`/resume.pdf`) but the file doesn't exist yet —
-   drop your actual résumé at `public/resume.pdf`.
-3. **Phosphor icons** aren't wired in yet — none appeared on the frames
+2. **Phosphor icons** aren't wired in yet — none appeared on the frames
    pulled so far, but they'll be needed once we build pages that use them.
 
 ## Deploying
 
-Push this to a GitHub repo, then import it at vercel.com (or netlify.com) —
-both auto-detect Next.js, no config needed. Add your custom domain in the
-project settings once it's live.
+Live at [kevinbdoyle.com](https://kevinbdoyle.com), Vercel project
+`beelzebuddhas-projects/portfolio-site`. Source is on GitHub at
+[beelzebuddha/portfolio-site](https://github.com/beelzebuddha/portfolio-site)
+and connected to Vercel — pushing to `main` auto-deploys to production.
