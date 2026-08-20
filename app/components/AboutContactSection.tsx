@@ -22,7 +22,7 @@ export default function AboutContactSection() {
             <div className={styles.bioCopy}>
               <p>Hi! I&rsquo;m Kevin.</p>
               <p>
-                I design experiences that truly improve people&rsquo;s lives
+                Designing experiences that truly improve people&rsquo;s lives
                 is my professional passion.
               </p>
               <a href="/about" className={`${styles.link} link-underline`}>
