@@ -25,7 +25,7 @@ export default function AboutHero() {
         <div className={styles.row}>
           <div className={styles.left}>
             <p className={styles.headline}>
-              I design experiences that truly improve people&rsquo;s lives is
+              Designing experiences that truly improve people&rsquo;s lives is
               my professional passion.
             </p>
             <p className={styles.standfirst}>
