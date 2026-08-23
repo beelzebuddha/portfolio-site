@@ -32,10 +32,10 @@ export default function AboutHero() {
               I&rsquo;ve spent 25+ years on complex, data-heavy enterprise
               applications — internal operational tools, regulated financial
               systems, federal platforms, and now the tools engineers build
-              with. Different industries, one constant: the people on the
-              other end can&rsquo;t leave, can&rsquo;t switch to a
-              competitor, and have no way to tell you anything unless
-              someone deliberately builds them a channel.
+              with. Different industries, one constant: the people on the other
+              end can&rsquo;t leave, can&rsquo;t switch to a competitor, and
+              have no way to tell you anything unless someone deliberately
+              builds them a channel.
             </p>
             <div className={styles.tags}>
               <TagChip label="Design Leadership" />

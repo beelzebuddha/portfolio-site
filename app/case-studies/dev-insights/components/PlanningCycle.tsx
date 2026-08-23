@@ -26,9 +26,7 @@ export default function PlanningCycle() {
     <div className={styles.wrap}>
       {STEPS.map((step, i) => (
         <div key={step.heading} className={styles.stepWrap}>
-          <div
-            className={`${styles.step} ${i === 0 ? styles.stepFirst : ''}`}
-          >
+          <div className={`${styles.step} ${i === 0 ? styles.stepFirst : ''}`}>
             <p className={styles.heading}>{step.heading}</p>
             <p className={styles.body}>{step.body}</p>
           </div>

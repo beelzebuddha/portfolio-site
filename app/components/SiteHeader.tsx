@@ -23,19 +23,34 @@ export default function SiteHeader() {
         <nav className={styles.nav} aria-label="Primary">
           <Link
             href="/#case-studies"
-            className={isAbout ? `${styles.navItem} link-underline` : styles.navItemActive}
+            className={
+              isAbout
+                ? `${styles.navItem} link-underline`
+                : styles.navItemActive
+            }
           >
             Case Studies
-            {!isAbout && <span className={styles.underline} aria-hidden="true" />}
+            {!isAbout && (
+              <span className={styles.underline} aria-hidden="true" />
+            )}
           </Link>
           <Link
             href="/about"
-            className={isAbout ? styles.navItemActive : `${styles.navItem} link-underline`}
+            className={
+              isAbout
+                ? styles.navItemActive
+                : `${styles.navItem} link-underline`
+            }
           >
             About
-            {isAbout && <span className={styles.underline} aria-hidden="true" />}
+            {isAbout && (
+              <span className={styles.underline} aria-hidden="true" />
+            )}
           </Link>
-          <Link href="/resume.pdf" className={`${styles.navItem} link-underline`}>
+          <Link
+            href="/resume.pdf"
+            className={`${styles.navItem} link-underline`}
+          >
             Resume
           </Link>
           <button

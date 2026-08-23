@@ -28,11 +28,10 @@ export default function ResourcesSection() {
           <div className={styles.intro}>
             <h2 className={styles.heading}>Gathering Data</h2>
             <p className={styles.body}>
-              These are resources I use to gather the data to help me, the
-              dev team, and stakeholders make informed decisions. These
-              templates are for collaborative exercises — you&apos;re welcome
-              to use with your design team, developers, and business
-              stakeholders.
+              These are resources I use to gather the data to help me, the dev
+              team, and stakeholders make informed decisions. These templates
+              are for collaborative exercises — you&apos;re welcome to use with
+              your design team, developers, and business stakeholders.
             </p>
           </div>
           <div className={styles.grid}>
@@ -56,7 +55,7 @@ export default function ResourcesSection() {
                   <span className={styles.num}>{t.num}</span>
                   <span className={styles.mutedLabel}>{t.label}</span>
                 </div>
-              )
+              ),
             )}
             <div className={styles.emptyCell} aria-hidden="true" />
           </div>

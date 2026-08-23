@@ -15,7 +15,13 @@ export default function Figure({
   return (
     <div className={styles.figure}>
       <div className={styles.frame} style={{ aspectRatio }}>
-        <Image src={src} alt={alt} fill className={styles.image} sizes="100vw" />
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          className={styles.image}
+          sizes="100vw"
+        />
       </div>
       {caption && <p className={styles.caption}>{caption}</p>}
     </div>

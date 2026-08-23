@@ -19,7 +19,7 @@ const SCREENSHOT_DOWNLOAD = '/images/chassis-codegen/screenshot-download.png';
 export const metadata: Metadata = {
   title: 'Chassis CodeGen — Kevin B. Doyle',
   description:
-    "How a 55-component microservice catalog went from a single all-or-nothing package to a browse, configure, and download experience — while I taught the engineering team to build their own customization forms.",
+    'How a 55-component microservice catalog went from a single all-or-nothing package to a browse, configure, and download experience — while I taught the engineering team to build their own customization forms.',
 };
 
 export default function ChassisCodeGenPage() {
@@ -81,26 +81,24 @@ export default function ChassisCodeGenPage() {
               </div>
               <div className={styles.body}>
                 <p className={styles.lede}>
-                  To use one Chassis component, a developer had to download
-                  all 55 of them. The enterprise microservice library was
-                  one package — every service, every dependency, whether
-                  the project needed it or not. Documentation for each
-                  service lived in different locations. Each service team
-                  kept its own, in its own Confluence space, wherever that
-                  team decided to put it.
+                  To use one Chassis component, a developer had to download all
+                  55 of them. The enterprise microservice library was one
+                  package — every service, every dependency, whether the project
+                  needed it or not. Documentation for each service lived in
+                  different locations. Each service team kept its own, in its
+                  own Confluence space, wherever that team decided to put it.
                 </p>
                 <p className={styles.bodyText}>
-                  After adding the package, developers had to go through
-                  and delete each microservice the project wasn&apos;t
-                  going to use. Other teams left the whole library in
-                  place, unused files and all. Whatever remained still had
-                  to be configured by hand, one component at a time,
-                  against documentation a developer had to know where to
-                  look for.
+                  After adding the package, developers had to go through and
+                  delete each microservice the project wasn&apos;t going to use.
+                  Other teams left the whole library in place, unused files and
+                  all. Whatever remained still had to be configured by hand, one
+                  component at a time, against documentation a developer had to
+                  know where to look for.
                 </p>
                 <p className={styles.bodyText}>
-                  Nobody picked Chassis. It was the standard. That work
-                  landed on every team, on every service, every time.
+                  Nobody picked Chassis. It was the standard. That work landed
+                  on every team, on every service, every time.
                 </p>
               </div>
             </div>
@@ -116,16 +114,15 @@ export default function ChassisCodeGenPage() {
             </p>
             <div className={styles.body}>
               <p className={styles.mutedText}>
-                Scroll or search 55 components, add what the service needs
-                to a cart, and leave by one of two doors: download the
-                selection as a single zip, or open each component and
-                configure it first. The last screen lists what&apos;s in
-                the package before the download runs.
+                Scroll or search 55 components, add what the service needs to a
+                cart, and leave by one of two doors: download the selection as a
+                single zip, or open each component and configure it first. The
+                last screen lists what&apos;s in the package before the download
+                runs.
               </p>
               <p className={styles.mutedText}>
-                Nothing arrives that has to be deleted. Configuration
-                happens in the cart, so a component drops into the project
-                ready to run.
+                Nothing arrives that has to be deleted. Configuration happens in
+                the cart, so a component drops into the project ready to run.
               </p>
             </div>
             <Figure
@@ -175,18 +172,16 @@ export default function ChassisCodeGenPage() {
                   </p>
                   <p className={styles.mutedText}>
                     The customization forms were a different problem. Every
-                    component exposed its own options, and new ones
-                    arrived on the engineering team&apos;s schedule, not
-                    mine. Whatever I built had to work for components that
-                    did not exist yet.
+                    component exposed its own options, and new ones arrived on
+                    the engineering team&apos;s schedule, not mine. Whatever I
+                    built had to work for components that did not exist yet.
                   </p>
                   <p className={styles.mutedText}>
-                    So I provided the guidance instead: how options group,
-                    which control fits which kind of setting, what a
-                    default does when a developer changes nothing, what
-                    the form has to document. The engineering team built
-                    forms at their own pace from there. I approved layouts
-                    at sprint review.
+                    So I provided the guidance instead: how options group, which
+                    control fits which kind of setting, what a default does when
+                    a developer changes nothing, what the form has to document.
+                    The engineering team built forms at their own pace from
+                    there. I approved layouts at sprint review.
                   </p>
                 </>
               }
@@ -202,24 +197,22 @@ export default function ChassisCodeGenPage() {
             <p className={styles.sectionTitle}>Beyond the design...</p>
             <div className={styles.body}>
               <p className={styles.mutedText}>
-                Documentation was the part I could not design my way out
-                of. It belonged to the service teams and it lived wherever
-                they had put it. So we consolidated it into a single
-                Chassis space in Confluence and made maintaining it there a
-                condition of being in the catalog. Every component card
-                links to its own entry.
+                Documentation was the part I could not design my way out of. It
+                belonged to the service teams and it lived wherever they had put
+                it. So we consolidated it into a single Chassis space in
+                Confluence and made maintaining it there a condition of being in
+                the catalog. Every component card links to its own entry.
               </p>
               <p className={styles.mutedText}>
-                To use the components they need, a developer now downloads
-                only those. Chassis is still the standard. It just stopped
-                making teams pay for it.
+                To use the components they need, a developer now downloads only
+                those. Chassis is still the standard. It just stopped making
+                teams pay for it.
               </p>
             </div>
             <Aside label="THE TRADEOFF">
               Consolidating documentation solved discovery but moved a
-              maintenance burden onto service teams as a condition of
-              catalog membership. That only holds while the catalog is
-              worth being in.
+              maintenance burden onto service teams as a condition of catalog
+              membership. That only holds while the catalog is worth being in.
             </Aside>
           </div>
         </section>

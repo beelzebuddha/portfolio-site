@@ -17,8 +17,8 @@ export default function Hero() {
             In my career, I&apos;ve created experiences for the people who
             don&apos;t get to choose the applications and systems they use
             everyday, all day: the employee. I improve the internal tools,
-            enterprise platforms, and golden path experiences that determine
-            the workday for the people who depend on them.
+            enterprise platforms, and golden path experiences that determine the
+            workday for the people who depend on them.
           </p>
           <p>
             Currently, that means creating products tailored to improve the
