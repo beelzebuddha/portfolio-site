@@ -10,7 +10,7 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: 'About — Kevin B. Doyle',
   description:
-    "25+ years designing for the captive user — internal tools, regulated financial systems, federal platforms, and now the tools engineers build with.",
+    '25+ years designing for the captive user — internal tools, regulated financial systems, federal platforms, and now the tools engineers build with.',
 };
 
 export default function AboutPage() {
@@ -48,54 +48,80 @@ export default function AboutPage() {
           <div className={`container ${styles.inner}`}>
             <div className={styles.body}>
               <p>
-                My work moved through three chapters. Early on I designed
-                internal tools and portals for financial services and
-                membership organizations — Capital One, Navy Federal, Credit
-                Suisse, AARP — where a confusing screen didn&apos;t cost a
-                conversion, it cost someone an hour a day for the rest of
-                their tenure. At CGI Federal I spent seven years directing UX
-                for public platforms, including the Medicare.gov Compare
-                Tools and GSA marketplaces, where accessibility and
-                regulatory compliance were the floor rather than the finish
-                line. I arrived as a User Experience Manager and left as a
-                Consulting Director. Today I lead design for Enterprise
-                Developer Experience at Fannie Mae, where 3,000+ engineers
-                depend on internal platforms nobody asked them to adopt.
+                From very early on I have been designing internal tools and
+                portals for financial services and membership organizations —
+                Capital One, Navy Federal, Credit Suisse, AARP — where a
+                confusing screen didn&apos;t cost a conversion, it cost someone
+                an hour a day for the rest of their tenure.
               </p>
               <p>
-                The captive-user problem has one honest fix: build the
-                feedback channel yourself, because the market won&apos;t hand
-                you one. That&apos;s what Dev Insights is. I founded it as a
-                45-developer panel with no mandate and grew it to 450 through
-                org-wide Snapshot surveys built on the DX Core 4 framework.
-                The findings didn&apos;t stop at a readout — they became
-                CIO-level OKRs and the priorities behind an internal
-                developer platform. As product owner for Stack Overflow
-                Enterprise, I ran the engagement program that grew activity
-                125% and returned 21,000+ developer-hours a year.
+                At CGI Federal I spent seven years directing UX for public
+                platforms, including the Medicare.gov Compare Tools and
+                USPTO&apos;s Open Data Initiative, where accessibility and
+                regulatory compliance were the standard. I arrived as a User
+                Experience Manager and left as a Consulting Director. More
+                recently, I led the product design and customer research for
+                Enterprise Developer Experience at Fannie Mae, where 3,000+
+                engineers depend on internal platforms I designed and helped
+                improve.
+              </p>
+              <p>
+                The captive-user problem has one honest fix: build the feedback
+                channel yourself, because the market won&apos;t hand you one.
+                That&apos;s what Dev Insights is. I founded it as a 45-developer
+                panel with no mandate and grew it to 450 through org-wide
+                Snapshot surveys built on the DX Core 4 framework. The findings
+                didn&apos;t stop at a readout — they became CIO-level OKRs and
+                the priorities behind an internal developer platform. As product
+                owner for Stack Overflow Enterprise, I ran the engagement
+                program that grew activity 125% and returned 21,000+
+                developer-hours a year.
               </p>
               <p>
                 How I lead is mostly player-coach. I&apos;ve directed
-                cross-functional teams of eight to twelve, mentored
-                designers in and out of the office, governed design systems across multiple products,
-                and run design for programs where I was the only designer in
-                the room. Most of the authority I&apos;ve had came from
-                evidence rather than reporting lines. I&apos;d rather say
-                that plainly than dress it up.
+                cross-functional teams of eight to twelve, mentored designers,
+                governed design systems across multiple products, and run design
+                for programs where I was the only designer in the room. Most of
+                the authority I&apos;ve had came from evidence rather than
+                reporting lines. I&apos;d rather say that plainly than dress it
+                up.
               </p>
               <p>
-                I hold a BFA in Art Education from Virginia Commonwealth University, a
-                Certified Usability Analyst credential from Human Factors
-                International, and a Certified Scrum Master certification
-                from Scrum Alliance. More recently: Jared Spool&apos;s UX
-                Leadership and Influence course, and Data-Driven Design and
-                Advanced Figma with DesignLab. I&apos;m a founding member of
-                Fannie Mae&apos;s Enterprise Accessibility Council.
+                I hold a BFA from Virginia Commonwealth University, a{' '}
+                <a
+                  href="/Kevin%20CUA%20certificate_Compressed.pdf"
+                  className={styles.inlineLink}
+                >
+                  Certified Usability Analyst credential
+                </a>{' '}
+                from Human Factors International, and a{' '}
+                <a
+                  href="/Kevin%20B.%20Doyle-ScrumAlliance_CSM_Certificate.pdf"
+                  className={styles.inlineLink}
+                >
+                  Certified Scrum Master certification
+                </a>{' '}
+                from Scrum Alliance. More recently: Jared Spool&apos;s{' '}
+                <a
+                  href="/Win_Stakeholders_Influence_Decisions_cert.pdf"
+                  className={styles.inlineLink}
+                >
+                  UX Leadership and Influence course
+                </a>{' '}
+                (now titled UX Leadership and Influence with Jared Spool), and{' '}
+                <a
+                  href="/Data-Driven%20Design%20Certificate%20of%20Completion%20-%20Kevin%20Doyle%20ECb78e.pdf"
+                  className={styles.inlineLink}
+                >
+                  Data-Driven Design
+                </a>{' '}
+                and Advanced Figma with DesignLab. I&apos;m also a founding
+                member of Fannie Mae&apos;s Enterprise Accessibility Council.
               </p>
               <p>
-                Outside of work I sketch in charcoal, play guitar, hike when
-                the weather cooperates, watch too much TV with my cats, and
-                spend long weekends around a campfire with my camping fam.
+                Outside of work I sketch in charcoal, play guitar, hike when the
+                weather cooperates, watch too much TV with my cats, and spend
+                long weekends around a campfire with my camping fam.
               </p>
             </div>
             <div className={styles.aside}>

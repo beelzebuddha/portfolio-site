@@ -26,6 +26,10 @@
   color: var(--ink);
 }
 
+.inlineLink {
+  text-decoration: underline;
+}
+
 .aside {
   flex-shrink: 0;
   width: 508px;
