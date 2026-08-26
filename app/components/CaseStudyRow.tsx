@@ -43,6 +43,7 @@ export default function CaseStudyRow({
           alt={imageAlt}
           width={569}
           height={405}
+          quality={90}
           className={styles.image}
         />
       </div>

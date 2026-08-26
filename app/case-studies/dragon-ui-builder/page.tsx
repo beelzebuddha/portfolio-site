@@ -174,6 +174,7 @@ export default function DragonUiBuilderPage() {
                   alt="Screenshot of the DragOn UI Builder custom component icon set"
                   aspectRatio="524/418"
                   caption="I wanted the icons to be as simplified as possible yet immediately recognizable as the component they represented."
+                  sizes="(min-width: 1240px) 508px, (min-width: 900px) calc((100vw - 144px) / 2), calc(100vw - 40px)"
                 />
               </div>
             </div>

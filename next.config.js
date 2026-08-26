@@ -5,6 +5,7 @@ const nextConfig = {
     // pull that generated them. Before deploying, export final images from Figma and
     // move them into /public/images, then remove this remotePatterns entry.
     remotePatterns: [{ protocol: 'https', hostname: 'www.figma.com' }],
+    qualities: [75, 90],
   },
 };
 
