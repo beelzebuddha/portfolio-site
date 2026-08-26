@@ -220,8 +220,8 @@ export default function ChassisCodeGenPage() {
         <div className={styles.seam} />
 
         <EndCTA
-          nextTitle="AXA Vantage Agent Portal"
-          nextHref="/case-studies/axa-vantage"
+          nextTitle="DragOn UI Builder"
+          nextHref="/case-studies/dragon-ui-builder"
         />
       </main>
       <SiteFooter />

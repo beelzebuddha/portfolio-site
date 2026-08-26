@@ -3,6 +3,7 @@ import CaseStudyRow from './CaseStudyRow';
 import styles from './CaseStudiesSection.module.css';
 
 const CHASSIS_IMG = '/images/home/chassis-thumb.png';
+const DRAGON_IMG = '/images/home/dragon-thumb.png';
 const AXA_IMG = '/images/home/axa-thumb.png';
 const REARVIEW_IMG = '/images/home/rearview-thumb.png';
 
@@ -19,6 +20,15 @@ export default function CaseStudiesSection() {
           summary="55 microservice components, each needing its own customization form, with new ones shipping continuously. Designing them one at a time would have made me a permanent dependency of the release process. So I designed the application experience and created the form guidance the developers built from — then approved the layouts at sprint review."
           imageSrc={CHASSIS_IMG}
           imageAlt="Screenshot of the Chassis CodeGen homepage"
+        />
+        <CaseStudyRow
+          company="FANNIE MAE"
+          title="DragOn UI Builder"
+          href="/case-studies/dragon-ui-builder"
+          tags={['Platform Design', 'Design System', 'Developer Experience']}
+          summary="A drag-and-drop UI builder that lets developers assemble interfaces from live components and generate design-system-aligned code by construction. I led the UX work that turned a hard-to-use open-source foundation into a tool teams chose to adopt across the organization."
+          imageSrc={DRAGON_IMG}
+          imageAlt="Screenshot of the DragOn UI Builder component palette"
         />
         <CaseStudyRow
           company="HUGE"
