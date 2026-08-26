@@ -148,31 +148,35 @@ export default function DragonUiBuilderPage() {
         <section className={`${styles.section} ${styles.py10}`}>
           <div className={`container ${styles.inner}`}>
             <p className={styles.sectionTitle}>Lack of design team support</p>
-            <div className={styles.body}>
-              <p className={styles.mutedText}>
-                At the scale DragOn served, this wasn&apos;t a queue teams could
-                join to borrow design help. It was that there was no design help
-                to queue for. Across a superdivision of more than 3,000
-                developers, over 90% of product teams had no design resource of
-                any kind — no designer on staff, no contractor, no realistic
-                path to getting either.
-              </p>
-              <p className={styles.mutedText}>
-                DragOn gave developers and product managers a way to build and
-                share a working concept without a line of code or a running dev
-                environment. A product manager could put together a real
-                interface, not a description of one, and hand it to a developer
-                already mostly done. That&apos;s design capacity no single
-                designer, or even a small team, could ever have covered at this
-                scale — the tool supplied it instead.
-              </p>
+            <div className={styles.bodyPullRow}>
+              <div className={styles.body}>
+                <p className={styles.mutedText}>
+                  At the scale DragOn served, this wasn&apos;t a queue teams
+                  could join to borrow design help. It was that there was no
+                  design help to queue for. Across a superdivision of more than
+                  3,000 developers, over 90% of product teams had no design
+                  resource of any kind — no designer on staff, no contractor, no
+                  realistic path to getting either.
+                </p>
+                <p className={styles.mutedText}>
+                  DragOn gave developers and product managers a way to build and
+                  share a working concept without a line of code or a running
+                  dev environment. A product manager could put together a real
+                  interface, not a description of one, and hand it to a
+                  developer already mostly done. That&apos;s design capacity no
+                  single designer, or even a small team, could ever have covered
+                  at this scale — the tool supplied it instead.
+                </p>
+              </div>
+              <div className={styles.imageColumn}>
+                <Figure
+                  src={SCREENSHOT_COMPONENTS}
+                  alt="Screenshot of the DragOn UI Builder custom component icon set"
+                  aspectRatio="524/418"
+                  caption="I wanted the icons to be as simplified as possible yet immediately recognizable as the component they represented."
+                />
+              </div>
             </div>
-            <Figure
-              src={SCREENSHOT_COMPONENTS}
-              alt="Screenshot of the DragOn UI Builder custom component icon set"
-              aspectRatio="524/418"
-              caption="I wanted the icons to be as simplified as possible yet immediately recognizable as the component they represented."
-            />
           </div>
         </section>
 

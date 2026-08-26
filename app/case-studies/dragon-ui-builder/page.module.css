@@ -122,3 +122,23 @@
     width: 100%;
   }
 }
+
+/* --- Body + image row (Body + Pull layout, image variant) --- */
+
+.bodyPullRow {
+  display: flex;
+  gap: var(--space-10);
+  align-items: flex-start;
+  width: 100%;
+}
+
+.imageColumn {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .bodyPullRow {
+    flex-direction: column;
+  }
+}
