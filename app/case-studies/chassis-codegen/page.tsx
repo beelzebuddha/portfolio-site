@@ -112,7 +112,7 @@ export default function ChassisCodeGenPage() {
             <p className={styles.sectionTitle}>
               A one-stop shop for the back-end
             </p>
-            <div className={styles.body}>
+            <div className={`${styles.body} measure-prose`}>
               <p className={styles.mutedText}>
                 Scroll or search 55 components, add what the service needs to a
                 cart, and leave by one of two doors: download the selection as a
@@ -195,7 +195,7 @@ export default function ChassisCodeGenPage() {
         >
           <div className={`container ${styles.inner}`}>
             <p className={styles.sectionTitle}>Beyond the design...</p>
-            <div className={styles.body}>
+            <div className={`${styles.body} measure-prose`}>
               <p className={styles.mutedText}>
                 Documentation was the part I could not design my way out of. It
                 belonged to the service teams and it lived wherever they had put

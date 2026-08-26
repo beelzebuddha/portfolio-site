@@ -39,6 +39,11 @@
 
   --layout-page-padding: 40px;
   --layout-max-width: 1160px;
+  /* Matches the text column width already produced by the rail+body
+     (Prose) and body+pull (BodyPull) two-column layouts at desktop, so
+     a full-width paragraph block reads at the same line length as one
+     that sits beside a rail, quote, or figure. */
+  --measure-prose: 636px;
 }
 
 /* --- Theme: Dark (confirmed) --- */
@@ -162,6 +167,20 @@ button:focus-visible,
   max-width: var(--layout-max-width);
   margin: 0 auto;
   padding: 0 var(--layout-page-padding);
+}
+
+/* Constrains a standalone full-width prose block to the same measure as
+   the two-column rail+body / body+pull layouts, above the breakpoint
+   where those layouts are still side-by-side. Below it, both patterns
+   already stack to full width, so this returns to none in step. */
+.measure-prose {
+  max-width: var(--measure-prose);
+}
+
+@media (max-width: 900px) {
+  .measure-prose {
+    max-width: none;
+  }
 }
 
 @media (max-width: 900px) {

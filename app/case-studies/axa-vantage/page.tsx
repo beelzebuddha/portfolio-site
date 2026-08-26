@@ -136,7 +136,7 @@ export default function AxaVantagePage() {
             <p className={styles.sectionTitle}>
               We moved the library from the brief case to their laptop.
             </p>
-            <div className={styles.body}>
+            <div className={`${styles.body} measure-prose`}>
               <p className={styles.mutedText}>
                 Executives and field managers described a distribution problem.
                 Printed material goes stale, reprints cost money, and an agent

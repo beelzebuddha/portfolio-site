@@ -119,7 +119,7 @@ export default function RearviewPage() {
             <p className={styles.sectionTitle}>
               The pager beat every channel we thought was better.
             </p>
-            <div className={styles.body}>
+            <div className={`${styles.body} measure-prose`}>
               <p className={styles.bodyText}>
                 Alerts went out by text, phone call, email, and pager. In
                 testing, the pager got the fastest response.
@@ -202,7 +202,7 @@ export default function RearviewPage() {
               aspectRatio="1080/609"
               caption='Monitor detail, final. Two changes from the wireframe, both from working with the engineers. The graph moved to the primary position and the series got color, so the anomaly is visible before anything is read. And the absolute date range became "minutes back from now," with a jump to previous errors — because an on-call engineer&apos;s question is never "show me July 17," it&apos;s "what just happened."'
             />
-            <div className={styles.body}>
+            <div className={`${styles.body} measure-prose`}>
               <p className={styles.bodyText}>
                 The tradeoff worth naming: Rearview is dense, and it was built
                 in direct partnership with the engineers who&apos;d live in it,

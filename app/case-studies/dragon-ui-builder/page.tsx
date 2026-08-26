@@ -105,7 +105,7 @@ export default function DragonUiBuilderPage() {
             <p className={styles.sectionTitle}>
               The developer couldn&apos;t build it wrong
             </p>
-            <div className={styles.body}>
+            <div className={`${styles.body} measure-prose`}>
               <p className={styles.mutedText}>
                 The usual path onto a new team looked the same everywhere: read
                 the design system documentation, guess at how a component was
