@@ -23,13 +23,11 @@
   padding: var(--space-4);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
 .superdivisionLabel {
-  position: absolute;
-  top: 12px;
-  left: 12px;
+  margin: 0;
   font-family: var(--font-display), sans-serif;
   font-weight: 500;
   font-size: 22px;
@@ -41,8 +39,9 @@
   position: relative;
   background: var(--surface);
   border: var(--stroke-hairline) solid var(--line-control);
-  width: 166px;
-  height: 166px;
+  /* 166 / 400 from the source proportions */
+  width: 41.5%;
+  height: 41.5%;
   display: flex;
   align-items: flex-end;
   gap: var(--space-1);
@@ -51,8 +50,9 @@
 .diTeam {
   background: var(--accent);
   color: var(--accent-ink);
-  width: 44px;
-  height: 44px;
+  /* 44 / 166 from the source proportions */
+  width: 26.506%;
+  height: 26.506%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -122,8 +122,9 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-0);
-  width: 360px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 360px;
+  min-width: 0;
 }
 
 .rowTitle {
@@ -145,6 +146,9 @@
 @media (max-width: 900px) {
   .card {
     flex-direction: column;
+  }
+  .diagram {
+    width: 100%;
   }
   .superdivision {
     width: 100%;
