@@ -2,8 +2,16 @@ import SectionHeader from './SectionHeader';
 import styles from './ResourcesSection.module.css';
 
 const templates = [
-  { num: '01', label: 'Customer Interview template', href: null },
-  { num: '02', label: 'Stakeholder Interview template', href: null },
+  {
+    num: '01',
+    label: 'Customer Interview template',
+    href: 'https://www.figma.com/board/GVLBzadNoAVsp62kBdg1ZE/Customer-Interview-Template?node-id=0-1&t=P3Q6pA6Zhu5rwQNb-1',
+  },
+  {
+    num: '02',
+    label: 'Stakeholder Interview template',
+    href: 'https://www.figma.com/board/XknDNApLjw6EwCz4am0UK4/Stakeholder-Interview-Template?node-id=0-1&t=ygdRjDiQyAbQYmWU-1',
+  },
   {
     num: '03',
     label: 'Activity Planning template',
@@ -41,7 +49,7 @@ export default function ResourcesSection() {
                   key={t.num}
                   href={t.href}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className={styles.cellActive}
                 >
                   <span className={styles.num}>{t.num}</span>
