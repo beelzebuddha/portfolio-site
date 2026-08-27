@@ -14,15 +14,10 @@ export default function Hero() {
         </h1>
         <div className={styles.intro}>
           <p className={styles.muted}>
-            In my career, I&apos;ve created experiences for the people who
-            don&apos;t get to choose the applications and systems they use
-            everyday, all day: the employee. I improve the internal tools,
-            enterprise platforms, and golden path experiences that determine the
-            workday for the people who depend on them.
+            In my career, I've created experiences for the people who don't get to choose the applications and systems they use every day, all day — the employee. I designed internal tools, enterprise platforms, and golden-path experiences, and founded and led DevInsights, a voice-of-customer research program that turned signal from thousands of engineers into the roadmap for their tools.
           </p>
           <p>
-            Currently, that means creating products tailored to improve the
-            developer&apos;s work experience.
+            Today, I bring that same discipline — founding programs, reading data at scale, designing for the people who never chose their tools — to whatever comes next.
           </p>
         </div>
       </div>
