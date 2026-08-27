@@ -223,8 +223,6 @@ export default function DragonUiBuilderPage() {
           </div>
         </section>
 
-        <div className={styles.seam} />
-
         <EndCTA
           nextTitle="AXA Vantage Agent Portal"
           nextHref="/case-studies/axa-vantage"

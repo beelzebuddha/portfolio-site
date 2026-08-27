@@ -15,7 +15,6 @@ export default function ContactCard() {
             kbdoyle@gmail.com
           </a>
         </div>
-        <div className={styles.seam} />
         <div className={styles.row}>
           <span className={styles.rowLabel}>LINKEDIN</span>
           <a
@@ -27,7 +26,6 @@ export default function ContactCard() {
             linkedin.com/in/kbdoyle
           </a>
         </div>
-        <div className={styles.seam} />
         <div className={styles.row}>
           <span className={styles.rowLabel}>RESUME</span>
           <a href="/resume.pdf" className={`${styles.link} link-underline`}>

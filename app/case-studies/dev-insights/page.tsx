@@ -108,8 +108,6 @@ export default function DevInsightsPage() {
           </div>
         </section>
 
-        <div className={styles.seam} />
-
         <section
           className={`${styles.section} ${styles.bgPanel} ${styles.borderBottom}`}
         >
@@ -139,8 +137,6 @@ export default function DevInsightsPage() {
             </p>
           </div>
         </section>
-
-        <div className={styles.seam} />
 
         <section className={`${styles.section} ${styles.borderBottom}`}>
           <div className={`container ${styles.inner}`}>
@@ -192,9 +188,9 @@ export default function DevInsightsPage() {
           </div>
         </section>
 
-        <div className={styles.seam} />
-
-        <section className={`${styles.section} ${styles.bgSurface}`}>
+        <section
+          className={`${styles.section} ${styles.bgSurface} ${styles.borderBottom}`}
+        >
           <div className={`container ${styles.inner}`}>
             <p className={styles.sectionTitle}>
               Measuring what we couldn&apos;t see
@@ -248,8 +244,6 @@ export default function DevInsightsPage() {
             </div>
           </div>
         </section>
-
-        <div className={styles.seam} />
 
         <section className={styles.section}>
           <div className={`container ${styles.inner}`}>

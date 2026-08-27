@@ -34,12 +34,6 @@
   gap: var(--space-7);
 }
 
-.seam {
-  background: var(--line);
-  height: 1px;
-  width: 100%;
-}
-
 .sectionTitle {
   font-family: var(--font-display), sans-serif;
   font-weight: 700;

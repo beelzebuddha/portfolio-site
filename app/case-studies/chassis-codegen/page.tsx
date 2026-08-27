@@ -220,8 +220,6 @@ export default function ChassisCodeGenPage() {
           </div>
         </section>
 
-        <div className={styles.seam} />
-
         <EndCTA
           nextTitle="DragOn UI Builder"
           nextHref="/case-studies/dragon-ui-builder"
