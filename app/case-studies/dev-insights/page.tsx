@@ -67,41 +67,41 @@ export default function DevInsightsPage() {
               <div className={styles.body}>
                 <p className={styles.lede}>
                   Before forming the DevInsights Team, we only had access to
-                  directors, principals, and VPs. And that leadership viewed
-                  bulk of our 3,000+ developers as “full-stack”. One population,
+                  directors, principals, and VPs, and that leadership viewed the
+                  bulk of our 3,000+ developers as “full-stack” developers. One lump group,
                   one label, one set of assumptions.
                 </p>
                 <p className={styles.bodyText}>
-                  The top-down approach wasn&apos;t producing anything we could
-                  act on. I knew we had to reach the “front-line” coders — the
-                  developers who lived, ate, and breathed code all day. Their
-                  insight wouldn&apos;t just guide our team&apos;s roadmap. It
+                  It was clear that the top-down approach wasn&apos;t producing anything tangible we could
+                  act on. I knew we had to skip the chain of command and reach out to the “front-line” coders — the
+                  developers who lived, ate, and breathed code all day. The developers knew what was broken across our SDLC because they cared. Had passion. 
+                  Their insight wouldn&apos;t just guide our team&apos;s roadmap. It
                   could guide an entire division of 3,000+ developers.
                 </p>
                 <p className={styles.bodyText}>
-                  So I went sideways, working from the bottom up. I spoke with
-                  designers, few team leads, and project managers — the people
-                  who worked closest to developers — who they most liked working
-                  with. Then I asked those developers the same question, and
-                  kept pulling the thread until I had a pool of 45.
+                  So I walked the frontline and spoke with other developers,
+                  designers, team leads, and project managers — the people
+                  who worked closest to developers — and asked them who they most liked working
+                  with. Everyone had a someone they liked working with. After speaking with a few of those developers, I then asked those developers the same question, and
+                  kept pulling the thread until I had a pool of very passionate, engaged developers.
                 </p>
                 <p className={styles.bodyText}>
                   What I found inside the “full-stack” label was far more
-                  nuanced than leadership believed. Using active directory
+                  nuanced than leadership&apos;s understanding. Using active directory
                   information, 1:1 interviews, and focus groups, I built a
                   detailed dataset on every team member: full-stack or front-end
-                  or back-end by preference, tooling (VS Code vs. JetBrains),
-                  years at Fannie, years as a developer, assets supported,
-                  manager, team, director, and VP.
+                  or back-end by preference, tooling (VS Code vs. JetBrains, etc.),
+                  tenure at Fannie, years of professional experience, assets supported,
+                  manager, team, director, and VP. 
                 </p>
                 <p className={styles.bodyText}>
-                  That dataset became the instrument. Forty-five developers,
+                  That dataset became the instrument. The key. Forty-five developers,
                   precisely characterized, speaking for 3,000+.
                 </p>
               </div>
             </div>
             <Aside label="THE TRADEOFF">
-              Referral sampling surfaces the visible and the well-connected. I
+              Referral sampling surfaced the visible and the well-connected data. I
               used active directory data to check coverage across all seven
               technology organizations and corrected for gaps as the panel grew.
             </Aside>
@@ -115,7 +115,7 @@ export default function DevInsightsPage() {
         >
           <div className={`container ${styles.inner}`}>
             <p className={styles.sectionTitle}>
-              A community of passionate voices
+              A chorus of passionate voices
             </p>
             <p className={styles.intro}>
               A panel is only useful if it stays warm. We ran DevInsights in a
@@ -128,14 +128,14 @@ export default function DevInsightsPage() {
                 'Attend DevInsights activities and monthly meetings — roughly five hours a month',
                 'Speak up in group activities; no one is silent',
                 'Maintain access to the tools we work in: Mural, Figma, and others',
-                'Talk to fellow developers about their friction points and bring them back to the team',
+                'Talk to fellow developers about their friction points and report back',
                 'Cameras on during recorded sessions',
               ]}
             />
             <p className={styles.intro}>
               Five hours a month from 45 developers bought us a standing line
               into how thousands of engineers actually worked. Public-product
-              teams pay a fortune for access like that. We had it down the hall.
+              teams pay a fortune for access like that. We had it at our fingertips; whenever we needed it. 
             </p>
           </div>
         </section>
@@ -202,12 +202,12 @@ export default function DevInsightsPage() {
             <div className={`${styles.body} measure-prose`}>
               <p className={styles.lede}>
                 Forty-five developers could tell us what was wrong. However,
-                having more developers would help us pinpoint to where
-                improvements were needed down to the unit level and yield true
+                having more developers would help us pinpoint exactly where
+                improvements were needed down to the unit level and yield quantitative data to back up the qualitative
                 insights.
               </p>
               <p className={styles.bodyText}>
-                So we grew the panel. DevInsights went from 45 to 450 developers
+                So the panel grew. DevInsights went from 45 to 450 developers
                 — roughly one in seven people in the division — recruited across
                 all seven technology organizations rather than by referral this
                 time, so the larger pool corrected the sampling bias the
@@ -219,25 +219,21 @@ export default function DevInsightsPage() {
             <OrgChart450 />
             <div className={`${styles.body} measure-prose`}>
               <p className={styles.bodyText}>
-                Two tiers, two jobs. The champions gave us depth and outreach.
-                They would rally the dev teams they worked in, listened to their
-                pain points, jotted down their own pain points, and encouraged
+                Two tiers, two jobs. The originial 45 developers became champions - captains that could rally the dev teams they represented and encourage the
                 developers on their team to take the quarterly Snapshot survey.
               </p>
               <p className={styles.bodyText}>
-                The 450 gave us a survey population that represented 1 in 7
+                The full pool of 450 team members gave us a survey population that represented 1 in 7
                 developers. Imagine having a product where you could speak to
                 one-seventh of your customer base.
               </p>
               <p className={styles.bodyText}>
                 That kind of representation made this a true DevInsights team.
-                We stood up the DX Intelligence Platform on the DX Core 4
-                framework and ran the division&apos;s first developer
-                self-assessment — the Snapshot — alongside driver deep-dive
-                surveys and product assessments.
+                We first ran a pilot survey to validate the DX Core 4 platform, then ran the division&apos;s first developer
+                self-assessment — the Snapshot. This would be the first comprehensive survey of our developers. It asked questions about every aspect of their developer experience, from the tools they used to the processes they followed to the culture they worked in.
               </p>
               <p className={styles.bodyText}>
-                The April Snapshot pointed hard at two things. Deep work scored
+                The April Snapshot called out several areas of concern but we decided to keep the focus on two, based on importance determined by developer feedback and DXI rating as it compared the the P75 - the top 25 percent of the tech industry. Deep work scored
                 low — developers weren&apos;t failing at their jobs, they were
                 being prevented from doing them, fragmented across meetings,
                 tools, and context switches. Build and test scored low alongside
@@ -260,7 +256,7 @@ export default function DevInsightsPage() {
             <p className={styles.sectionTitle}>What changed</p>
             <div className={`${styles.body} measure-prose`}>
               <p className={styles.mutedText}>
-                Leadership took the April findings into 2025 planning. Deep work
+                Leadership took the survey&apos;s findings into planning for the upcoming quarter. Deep work
                 and build-and-test became the priorities the platform
                 organization worked against — the DevEx North Star metrics the
                 division judged itself by, translated into OKRs and roadmap
