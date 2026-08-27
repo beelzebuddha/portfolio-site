@@ -34,11 +34,9 @@ export default function ChassisCodeGenPage() {
           title="Chassis CodeGen"
           dek="Dozens of service components, each needing its own customization form. Designing them one at a time would have spent the platform's entire design capacity on a single tool. So I designed the application, the component and pattern library and taught the basics of form design to the dev team, and moved from drafting every screen to approving them at sprint review."
           tags={['Platform Design', 'Developer Experience', 'Visual Design']}
-          border={false}
         />
 
         <FactStrip
-          borderTop
           borderColor="line"
           facts={[
             { label: 'ROLE', value: 'Product designer, platform' },
@@ -57,7 +55,9 @@ export default function ChassisCodeGenPage() {
           ]}
         />
 
-        <section className={`${styles.section} ${styles.py10}`}>
+        <section
+          className={`${styles.section} ${styles.py10} ${styles.borderBottom}`}
+        >
           <div className={`container ${styles.inner}`}>
             <Figure
               src={SCREENSHOT_CHASSIS}
@@ -69,7 +69,7 @@ export default function ChassisCodeGenPage() {
         </section>
 
         <section
-          className={`${styles.section} ${styles.py10} ${styles.bgSurface} ${styles.borderTop}`}
+          className={`${styles.section} ${styles.py10} ${styles.bgSurface} ${styles.borderBottom}`}
         >
           <div className={`container ${styles.inner}`}>
             <div className={styles.prose}>
@@ -109,7 +109,7 @@ export default function ChassisCodeGenPage() {
         </section>
 
         <section
-          className={`${styles.section} ${styles.py12} ${styles.borderTop} ${styles.borderBottom}`}
+          className={`${styles.section} ${styles.py12} ${styles.borderBottom}`}
         >
           <div className={`container ${styles.inner}`}>
             <p className={styles.sectionTitle}>
@@ -163,7 +163,9 @@ export default function ChassisCodeGenPage() {
           </div>
         </section>
 
-        <section className={`${styles.section} ${styles.py10}`}>
+        <section
+          className={`${styles.section} ${styles.py10} ${styles.borderBottom}`}
+        >
           <div className={`container ${styles.inner}`}>
             <p className={styles.sectionTitle}>Working with a dev team</p>
             <BodyPull
@@ -195,7 +197,7 @@ export default function ChassisCodeGenPage() {
         </section>
 
         <section
-          className={`${styles.section} ${styles.py10} ${styles.bgSurface} ${styles.borderAll}`}
+          className={`${styles.section} ${styles.py10} ${styles.bgSurface} ${styles.borderBottom}`}
         >
           <div className={`container ${styles.inner}`}>
             <p className={styles.sectionTitle}>Beyond the design...</p>

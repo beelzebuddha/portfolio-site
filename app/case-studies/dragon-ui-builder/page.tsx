@@ -32,11 +32,9 @@ export default function DragonUiBuilderPage() {
           title="DragOn UI Builder"
           dek="DragOn helped solve three problems: project onboarding for new and junior developers inefficiency, supportive tools for concept collaboration, and a lack of design support. DragOn became the design support they didn't have: new developers learned our Angular system by dragging its real components into place, developers and product managers built and shared working concepts without writing a line of code, and daily stand-ups turned into the place dev teams built the UI instead of just talking about it."
           tags={['Platform Design', 'Developer Experience', 'Visual Design']}
-          border={false}
         />
 
         <FactStrip
-          borderTop
           borderColor="line"
           facts={[
             { label: 'ROLE', value: 'Product designer, platform' },
@@ -56,7 +54,9 @@ export default function DragonUiBuilderPage() {
           ]}
         />
 
-        <section className={`${styles.section} ${styles.py10}`}>
+        <section
+          className={`${styles.section} ${styles.py10} ${styles.borderBottom}`}
+        >
           <div className={`container ${styles.inner}`}>
             <Figure
               src={SCREENSHOT_START}
@@ -68,7 +68,7 @@ export default function DragonUiBuilderPage() {
         </section>
 
         <section
-          className={`${styles.section} ${styles.py10} ${styles.bgSurface} ${styles.borderTop}`}
+          className={`${styles.section} ${styles.py10} ${styles.bgSurface} ${styles.borderBottom}`}
         >
           <div className={`container ${styles.inner}`}>
             <div className={styles.prose}>
@@ -99,7 +99,7 @@ export default function DragonUiBuilderPage() {
         </section>
 
         <section
-          className={`${styles.section} ${styles.py12} ${styles.borderTop} ${styles.borderBottom}`}
+          className={`${styles.section} ${styles.py12} ${styles.borderBottom}`}
         >
           <div className={`container ${styles.inner}`}>
             <p className={styles.sectionTitle}>
@@ -145,7 +145,9 @@ export default function DragonUiBuilderPage() {
           </div>
         </section>
 
-        <section className={`${styles.section} ${styles.py10}`}>
+        <section
+          className={`${styles.section} ${styles.py10} ${styles.borderBottom}`}
+        >
           <div className={`container ${styles.inner}`}>
             <p className={styles.sectionTitle}>Lack of design team support</p>
             <div className={styles.bodyPullRow}>
@@ -182,7 +184,7 @@ export default function DragonUiBuilderPage() {
         </section>
 
         <section
-          className={`${styles.section} ${styles.py10} ${styles.borderTop} ${styles.borderBottom}`}
+          className={`${styles.section} ${styles.py10} ${styles.borderBottom}`}
         >
           <div className={`container ${styles.inner}`}>
             <p className={styles.sectionTitle}>

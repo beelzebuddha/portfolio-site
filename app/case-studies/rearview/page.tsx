@@ -158,7 +158,7 @@ export default function RearviewPage() {
         </section>
 
         <section
-          className={`${styles.section} ${styles.py10} ${styles.bgSurface} ${styles.borderAll}`}
+          className={`${styles.section} ${styles.py10} ${styles.bgSurface} ${styles.borderBottom}`}
         >
           <div className={`container ${styles.inner}`}>
             <p className={styles.sectionTitle}>

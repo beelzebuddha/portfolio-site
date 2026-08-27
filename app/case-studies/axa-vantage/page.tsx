@@ -33,12 +33,10 @@ export default function AxaVantagePage() {
           title="AXA Vantage Agent Portal"
           dek="A professional portal for insurance advisors managing complex client portfolios — turning dense, regulated financial data into workflows an advisor could actually move through with their clients."
           tags={['Customer Research', 'Platform Design', 'Creative Direction']}
-          border={false}
           padding="compact"
         />
 
         <FactStrip
-          borderTop
           borderColor="line"
           facts={[
             { label: 'ROLE', value: 'Experience lead, agency engagement' },
@@ -130,7 +128,7 @@ export default function AxaVantagePage() {
         </section>
 
         <section
-          className={`${styles.section} ${styles.py12} ${styles.borderTop} ${styles.borderBottom}`}
+          className={`${styles.section} ${styles.py12} ${styles.borderBottom}`}
         >
           <div className={`container ${styles.inner}`}>
             <p className={styles.sectionTitle}>
@@ -179,7 +177,7 @@ export default function AxaVantagePage() {
         </section>
 
         <section
-          className={`${styles.section} ${styles.py10} ${styles.borderAll}`}
+          className={`${styles.section} ${styles.py10} ${styles.borderBottom}`}
         >
           <div className={`container ${styles.inner}`}>
             <p className={styles.sectionTitle}>
