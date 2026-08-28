@@ -62,9 +62,6 @@ npm run format:check  # CI-friendly check, no writes
 
 1. **Phosphor icons** aren't wired in yet — none appeared on the frames
    pulled so far, but they'll be needed once we build pages that use them.
-2. **Stale `next.config.js` entry.** `images.remotePatterns` still allowlists
-   `figma.com` from before images were exported locally — nothing references
-   a `figma.com` image URL anymore, so this can be deleted.
 
 ## Deploying
 
