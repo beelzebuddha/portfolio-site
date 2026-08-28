@@ -44,9 +44,15 @@ npm run format:check  # CI-friendly check, no writes
 - Résumé PDF live at `/resume.pdf`, linked from the Contact card.
 - Case study, home, and about page images exported from Figma and served
   locally from `/public/images` — no more expiring
-  `figma.com/api/mcp/asset/...` URLs.
+  `figma.com/api/mcp/asset/...` URLs. Re-exported at higher resolution for a
+  site-wide sharpness/responsive-sizing pass.
+- Resources grid's four templates all link out now (Customer Interview and
+  Stakeholder Interview templates were placeholder cells until their Figma
+  board links were added).
 - Design tokens in `app/globals.css`, matching your Figma variable
-  collections (Primitives → Theme → Scale).
+  collections (Primitives → Theme → Scale). Both Dark and Light mode alias
+  values are now confirmed from Figma's Theme collection — the dark↔light
+  toggle is trustworthy.
 - Fonts wired via `next/font`: Space Grotesk (display) + Source Sans 3 (body).
 - Visible keyboard focus ring + `prefers-reduced-motion` handling baked into
   `globals.css` globally, not per-component.
@@ -54,12 +60,11 @@ npm run format:check  # CI-friendly check, no writes
 
 ## Before this goes live — do these first
 
-1. **Light theme colors are placeholders.** `[data-theme='light']` in
-   `app/globals.css` was NOT pulled from the file — I don't have your real
-   Light mode alias values yet. The toggle works, but the light palette is a
-   guess. Say the word and I'll pull the Light mode variant and fix this.
-2. **Phosphor icons** aren't wired in yet — none appeared on the frames
+1. **Phosphor icons** aren't wired in yet — none appeared on the frames
    pulled so far, but they'll be needed once we build pages that use them.
+2. **Stale `next.config.js` entry.** `images.remotePatterns` still allowlists
+   `figma.com` from before images were exported locally — nothing references
+   a `figma.com` image URL anymore, so this can be deleted.
 
 ## Deploying
 
