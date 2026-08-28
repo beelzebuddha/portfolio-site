@@ -3,11 +3,11 @@
    Mirrors the Figma file's three variable collections:
    Primitives -> Theme (Light/Dark aliases) -> Scale
 
-   IMPORTANT: The values below are confirmed from a get_design_context pull
-   of the Home frame, which was captured with the file's Dark mode active.
-   Light-mode alias values were NOT part of that pull -- [data-theme="light"]
-   below is a placeholder and needs a real pull against the Light mode
-   variant before the toggle is trustworthy. Flagging rather than guessing.
+   Dark values were confirmed from a get_design_context pull of the Home
+   frame (captured with the file's Dark mode active). Light values were
+   pulled directly from the Theme variable collection's Light mode via the
+   Figma variables API and cross-checked against the Dark pull (both modes
+   alias into the same Core primitives), so both are now confirmed.
    ========================================================================= */
 
 :root {
@@ -63,19 +63,19 @@
   --line-control: #9a918a;
 }
 
-/* --- Theme: Light (PLACEHOLDER -- do not ship without a real pull) --- */
+/* --- Theme: Light (confirmed via Theme collection, Light mode) --- */
 [data-theme='light'] {
-  --bg: #f6f3f0;
+  --bg: #fbfaf9;
   --surface: #ffffff;
-  --panel: #ede8e3;
-  --ink: #1b1816;
-  --muted: #6b6560;
-  --accent: #c76a2e;
-  --accent-ink: #f6f3f0;
+  --panel: #f4f1ee;
+  --ink: #14110f;
+  --muted: #55504b;
+  --accent: #a34500;
+  --accent-ink: #ffffff;
   --focus: var(--accent);
-  --line: #ddd6ce;
-  --line-strong: #b8b0a6;
-  --line-control: #837a72;
+  --line: #dfd9d3;
+  --line-strong: #c6beb6;
+  --line-control: #8a817a;
 }
 
 * {
