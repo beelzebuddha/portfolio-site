@@ -10,16 +10,21 @@ export default function Figure({
   caption,
   aspectRatio,
   sizes = FULL_WIDTH_SIZES,
+  bare = false,
 }: {
   src: string;
   alt: string;
   caption?: string;
   aspectRatio: string;
   sizes?: string;
+  bare?: boolean;
 }) {
   return (
     <div className={styles.figure}>
-      <div className={styles.frame} style={{ aspectRatio }}>
+      <div
+        className={bare ? `${styles.frame} ${styles.bare}` : styles.frame}
+        style={{ aspectRatio }}
+      >
         <Image
           src={src}
           alt={alt}

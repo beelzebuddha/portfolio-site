@@ -141,6 +141,7 @@ export default function DragonUiBuilderPage() {
               alt="Screenshot of the DragOn UI Builder export and share modals"
               aspectRatio="1449/540"
               caption="Developers could copy and paste the code from DragOn directly into their IDE, share a link to the DragOn UI with someone, and save the project for later."
+              bare
             />
           </div>
         </section>
@@ -177,6 +178,7 @@ export default function DragonUiBuilderPage() {
                   aspectRatio="524/418"
                   caption="I wanted the icons to be as simplified as possible yet immediately recognizable as the component they represented."
                   sizes="(min-width: 1240px) 508px, (min-width: 900px) calc((100vw - 144px) / 2), calc(100vw - 40px)"
+                  bare
                 />
               </div>
             </div>
