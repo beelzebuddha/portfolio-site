@@ -7,12 +7,12 @@ import styles from './SiteHeader.module.css';
 
 const THEME_STORAGE_KEY = 'theme';
 
-function resolveStoredOrSystemTheme(): 'dark' | 'light' {
+// First-time visitors (no stored value) default to dark, not OS preference.
+// Keep in sync with the bootstrap script in app/layout.tsx.
+function resolveStoredOrDefaultTheme(): 'dark' | 'light' {
   const stored = window.localStorage.getItem(THEME_STORAGE_KEY);
   if (stored === 'dark' || stored === 'light') return stored;
-  return window.matchMedia('(prefers-color-scheme: light)').matches
-    ? 'light'
-    : 'dark';
+  return 'dark';
 }
 
 export default function SiteHeader() {
@@ -29,7 +29,7 @@ export default function SiteHeader() {
     if (applied === 'dark' || applied === 'light') {
       setTheme(applied);
     } else {
-      const resolved = resolveStoredOrSystemTheme();
+      const resolved = resolveStoredOrDefaultTheme();
       document.documentElement.setAttribute('data-theme', resolved);
       setTheme(resolved);
     }

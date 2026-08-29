@@ -6,17 +6,13 @@ import './globals.css';
 
 // Applied before hydration (next/script "beforeInteractive") so the real
 // theme is set before first paint -- avoids a flash of the wrong theme.
-// Keep in sync with the toggle logic in SiteHeader.tsx.
+// Keep in sync with the toggle logic in SiteHeader.tsx. First-time visitors
+// (no stored value) default to dark, not OS preference.
 const THEME_BOOTSTRAP_SCRIPT = `
   (function () {
     try {
       var stored = localStorage.getItem('theme');
-      var theme =
-        stored === 'dark' || stored === 'light'
-          ? stored
-          : window.matchMedia('(prefers-color-scheme: light)').matches
-            ? 'light'
-            : 'dark';
+      var theme = stored === 'dark' || stored === 'light' ? stored : 'dark';
       document.documentElement.setAttribute('data-theme', theme);
     } catch (e) {}
   })();
