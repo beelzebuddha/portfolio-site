@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Icon from './Icon';
 import styles from './MobileNav.module.css';
 
 type HashClickHandler = (e: React.MouseEvent<HTMLAnchorElement>) => void;
@@ -121,11 +122,20 @@ export default function MobileNav({
         </Link>
         <Link
           href="/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           onClick={onClose}
-          className={styles.navLink}
+          className={`${styles.navLink} ${styles.navLinkExternal}`}
           style={{ transitionDelay: delay(3) }}
         >
           Resume
+          <Icon
+            name="up-right-from-square"
+            size="sm"
+            color="muted"
+            className={styles.externalIcon}
+          />
+          <span className="sr-only">(opens in a new tab)</span>
         </Link>
       </nav>
       <button

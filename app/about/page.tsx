@@ -90,6 +90,8 @@ export default function AboutPage() {
                 I hold a BFA from Virginia Commonwealth University, a{' '}
                 <a
                   href="/Kevin%20CUA%20certificate_Compressed.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={styles.inlineLink}
                 >
                   Certified Usability Analyst credential
@@ -97,6 +99,8 @@ export default function AboutPage() {
                 from Human Factors International, and a{' '}
                 <a
                   href="/Kevin%20B.%20Doyle-ScrumAlliance_CSM_Certificate.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={styles.inlineLink}
                 >
                   Certified Scrum Master certification
@@ -104,6 +108,8 @@ export default function AboutPage() {
                 from Scrum Alliance. More recently: Jared Spool&apos;s{' '}
                 <a
                   href="/Win_Stakeholders_Influence_Decisions_cert.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={styles.inlineLink}
                 >
                   UX Leadership and Influence course
@@ -112,6 +118,8 @@ export default function AboutPage() {
                 Decisions), and{' '}
                 <a
                   href="/Data-Driven%20Design%20Certificate%20of%20Completion%20-%20Kevin%20Doyle%20ECb78e.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={styles.inlineLink}
                 >
                   Data-Driven Design

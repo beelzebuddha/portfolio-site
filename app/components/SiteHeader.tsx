@@ -145,9 +145,18 @@ export default function SiteHeader() {
           </Link>
           <Link
             href="/resume.pdf"
-            className={`${styles.navItem} link-underline`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${styles.navItem} ${styles.navItemExternal} link-underline`}
           >
             Resume
+            <Icon
+              name="up-right-from-square"
+              size="xs"
+              color="muted"
+              className={styles.externalIcon}
+            />
+            <span className="sr-only">(opens in a new tab)</span>
           </Link>
           <button
             type="button"

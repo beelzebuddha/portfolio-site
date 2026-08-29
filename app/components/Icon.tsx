@@ -1,5 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faXmark } from '@fortawesome/sharp-regular-svg-icons';
+import {
+  faBars,
+  faXmark,
+  faUpRightFromSquare,
+} from '@fortawesome/sharp-regular-svg-icons';
 
 // Add entries here as new icons are needed elsewhere on the site --
 // mix sharp-regular-svg-icons / sharp-solid-svg-icons imports freely,
@@ -8,6 +12,7 @@ import { faBars, faXmark } from '@fortawesome/sharp-regular-svg-icons';
 const ICONS = {
   bars: faBars,
   xmark: faXmark,
+  'up-right-from-square': faUpRightFromSquare,
 } as const;
 
 export type IconName = keyof typeof ICONS;
@@ -15,6 +20,7 @@ export type IconName = keyof typeof ICONS;
 // Maps onto the existing --space-* scale tokens rather than inventing new
 // icon-specific sizes.
 const SIZE_TOKENS = {
+  xs: 'var(--space-2)',
   sm: 'var(--space-3)',
   md: 'var(--space-4)',
   lg: 'var(--space-5)',

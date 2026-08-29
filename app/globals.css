@@ -127,6 +127,21 @@ a {
   text-decoration: none;
 }
 
+/* Visually hidden but still announced by screen readers -- standard
+   clip-based technique (display: none / visibility: hidden would remove
+   it from the accessibility tree instead of just hiding it visually). */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* Visible keyboard focus everywhere -- WCAG 2.4.7, per the Nav Item
    component annotation (2px color/focus ring, outside align, 2px offset) */
 a:focus-visible,

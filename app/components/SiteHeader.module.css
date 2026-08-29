@@ -54,6 +54,19 @@
   color: var(--muted);
 }
 
+/* Resume has no active/underline-bar state, so unlike the base .navItem's
+   column layout (which stacks an underline span below other items' text),
+   this can just be a row: label + icon inline. */
+.navItemExternal {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-0);
+}
+
+.externalIcon {
+  flex-shrink: 0;
+}
+
 .navItemActive {
   color: var(--ink);
 }

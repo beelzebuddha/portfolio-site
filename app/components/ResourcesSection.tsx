@@ -56,6 +56,7 @@ export default function ResourcesSection() {
                   <span className={`${styles.linkLabel} link-underline`}>
                     {t.label}
                   </span>
+                  <span className="sr-only">(opens in a new tab)</span>
                 </a>
               ) : (
                 <div key={t.num} className={styles.cell}>
