@@ -3,6 +3,8 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import Icon from './Icon';
+import MobileNav from './MobileNav';
 import styles from './SiteHeader.module.css';
 
 const THEME_STORAGE_KEY = 'theme';
@@ -18,8 +20,15 @@ function resolveStoredOrDefaultTheme(): 'dark' | 'light' {
 export default function SiteHeader() {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
   const isAbout = pathname?.startsWith('/about') ?? false;
+
+  // Covers same-page hash clicks (pathname doesn't change, so the menu
+  // wouldn't otherwise close) and belt-and-suspenders for any other nav.
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
 
   // Small threshold (rather than > 0) avoids flicker from momentum-scroll
   // rubber-banding at the very top on some browsers.
@@ -75,6 +84,16 @@ export default function SiteHeader() {
         block: 'start',
       });
       window.history.pushState(null, '', `#${id}`);
+    };
+
+  const closeMenu = () => setIsMenuOpen(false);
+
+  // Same-page hash clicks don't change pathname, so the effect above won't
+  // catch them -- close explicitly here instead.
+  const handleMobileHashNav =
+    (id: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+      closeMenu();
+      handleHashNav(id)(e);
     };
 
   return (
@@ -140,7 +159,43 @@ export default function SiteHeader() {
             {theme.toUpperCase()}
           </button>
         </nav>
+        <button
+          type="button"
+          className={styles.navToggle}
+          onClick={() => setIsMenuOpen((open) => !open)}
+          aria-expanded={isMenuOpen}
+          aria-controls="mobile-nav"
+          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+        >
+          <span className={styles.navToggleIconStack}>
+            <Icon
+              name="bars"
+              className={
+                isMenuOpen
+                  ? `${styles.navToggleIcon} ${styles.navToggleIconHidden}`
+                  : `${styles.navToggleIcon} ${styles.navToggleIconVisible}`
+              }
+            />
+            <Icon
+              name="xmark"
+              className={
+                isMenuOpen
+                  ? `${styles.navToggleIcon} ${styles.navToggleIconVisible}`
+                  : `${styles.navToggleIcon} ${styles.navToggleIconHidden}`
+              }
+            />
+          </span>
+        </button>
       </div>
+      <MobileNav
+        isOpen={isMenuOpen}
+        onClose={closeMenu}
+        isAbout={isAbout}
+        theme={theme}
+        onToggleTheme={toggleTheme}
+        onCaseStudiesClick={handleMobileHashNav('case-studies')}
+        onResourcesClick={handleMobileHashNav('resources')}
+      />
     </header>
   );
 }

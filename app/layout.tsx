@@ -2,7 +2,14 @@ import type { Metadata } from 'next';
 import { Space_Grotesk, Source_Sans_3 } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/next';
 import Script from 'next/script';
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 import './globals.css';
+
+// Next.js's own CSS pipeline handles icon styling instead -- without this,
+// Font Awesome injects a <style> tag at runtime, causing an unstyled icon
+// flash on first paint.
+config.autoAddCss = false;
 
 // Applied before hydration (next/script "beforeInteractive") so the real
 // theme is set before first paint -- avoids a flash of the wrong theme.

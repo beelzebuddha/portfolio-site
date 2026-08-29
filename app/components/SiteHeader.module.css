@@ -88,11 +88,55 @@
   display: inline-block;
 }
 
+/* Hidden on desktop; the media query below swaps this in for .nav at
+   narrow widths. 44x44 minimum touch target regardless of the icon's own
+   (smaller) rendered size. */
+.navToggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.navToggleIconStack {
+  position: relative;
+  width: var(--space-4);
+  height: var(--space-4);
+  display: inline-block;
+}
+
+.navToggleIcon {
+  position: absolute;
+  inset: 0;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.navToggleIconVisible {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+.navToggleIconHidden {
+  opacity: 0;
+  transform: rotate(45deg);
+  /* Otherwise the invisible icon still eats the toggle's one click. */
+  pointer-events: none;
+}
+
 @media (max-width: 700px) {
-  .nav {
-    gap: var(--space-2);
-  }
-  .navItem {
+  .navItem,
+  .navItemActive,
+  .modeToggle {
     display: none;
+  }
+  .navToggle {
+    display: flex;
   }
 }

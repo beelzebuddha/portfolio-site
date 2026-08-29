@@ -1,0 +1,112 @@
+.overlay {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--bg);
+  /* Just under the sticky header's z-index: 100, so the header (and its
+     now-an-X toggle button) stays visible and clickable above this panel. */
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-9);
+  padding: var(--space-8) var(--layout-page-padding);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.25s ease,
+    visibility 0s linear 0.25s;
+}
+
+.overlayOpen {
+  opacity: 1;
+  visibility: visible;
+  transition:
+    opacity 0.25s ease,
+    visibility 0s linear 0s;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.navLink,
+.navLinkActive {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: -0.32px;
+  text-align: center;
+  min-height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-1) var(--space-3);
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.overlayOpen .navLink,
+.overlayOpen .navLinkActive {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.navLink {
+  color: var(--muted);
+}
+
+.navLinkActive {
+  color: var(--accent);
+}
+
+.modeToggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  background: var(--panel);
+  border: 1px solid var(--line-control);
+  border-radius: var(--radius-control);
+  padding: var(--space-2) var(--space-4);
+  min-height: 44px;
+  color: var(--ink);
+  font-family: var(--font-body), sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1.65px;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.overlayOpen .modeToggle {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.modeDot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: inline-block;
+}
+
+@media (min-width: 701px) {
+  .overlay {
+    display: none;
+  }
+}
