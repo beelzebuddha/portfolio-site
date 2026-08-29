@@ -82,6 +82,14 @@
   box-sizing: border-box;
 }
 
+html {
+  /* Eases in-page hash navigation (Case Studies / Resources nav links,
+     same-page or landing here from another page) -- turned back to instant
+     under prefers-reduced-motion below. Nothing else on the site scrolls
+     programmatically, so this only ever affects those anchor jumps. */
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   padding: 0;
@@ -129,6 +137,10 @@ button:focus-visible,
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
   }
 }
 

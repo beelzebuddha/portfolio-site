@@ -44,6 +44,29 @@ export default function SiteHeader() {
     });
   };
 
+  // Links pass scroll={false} so Next's router never does its own
+  // post-navigation scroll restoration -- it deliberately disables CSS
+  // smooth-scroll while doing that, which would make the cross-page case
+  // snap instantly instead of easing in like a same-page click does.
+  // When already on Home, we scroll ourselves so it animates the same way;
+  // when navigating over from another page, HashScrollHandler (mounted on
+  // the Home page) picks up the hash and does the same thing once it lands.
+  const handleHashNav =
+    (id: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+      if (pathname !== '/') return;
+      const target = document.getElementById(id);
+      if (!target) return;
+      e.preventDefault();
+      const prefersReducedMotion = window.matchMedia(
+        '(prefers-reduced-motion: reduce)',
+      ).matches;
+      target.scrollIntoView({
+        behavior: prefersReducedMotion ? 'auto' : 'smooth',
+        block: 'start',
+      });
+      window.history.pushState(null, '', `#${id}`);
+    };
+
   return (
     <header className={styles.header}>
       <div className={`container ${styles.inner}`}>
@@ -53,6 +76,8 @@ export default function SiteHeader() {
         <nav className={styles.nav} aria-label="Primary">
           <Link
             href="/#case-studies"
+            scroll={false}
+            onClick={handleHashNav('case-studies')}
             className={
               isAbout
                 ? `${styles.navItem} link-underline`
@@ -66,6 +91,8 @@ export default function SiteHeader() {
           </Link>
           <Link
             href="/#resources"
+            scroll={false}
+            onClick={handleHashNav('resources')}
             className={`${styles.navItem} link-underline`}
           >
             Resources

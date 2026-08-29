@@ -1,4 +1,5 @@
 import SiteHeader from './components/SiteHeader';
+import HashScrollHandler from './components/HashScrollHandler';
 import Hero from './components/Hero';
 import StatsBand from './components/StatsBand';
 import CaseStudiesSection from './components/CaseStudiesSection';
@@ -9,6 +10,7 @@ import SiteFooter from './components/SiteFooter';
 export default function HomePage() {
   return (
     <>
+      <HashScrollHandler />
       <SiteHeader />
       <main>
         <Hero />
