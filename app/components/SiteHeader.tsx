@@ -65,6 +65,12 @@ export default function SiteHeader() {
             )}
           </Link>
           <Link
+            href="/#resources"
+            className={`${styles.navItem} link-underline`}
+          >
+            Resources
+          </Link>
+          <Link
             href="/about"
             className={
               isAbout
