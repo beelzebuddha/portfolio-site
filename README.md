@@ -57,9 +57,9 @@ npm run format:check  # CI-friendly check, no writes
   toggle is trustworthy.
 - Theme choice now persists across navigation and reloads: the toggle
   writes to `localStorage`, and a `beforeInteractive` bootstrap script in
-  `app/layout.tsx` applies the stored value (or, for first-time visitors,
-  the OS-level `prefers-color-scheme`) before first paint to avoid a flash
-  of the wrong theme.
+  `app/layout.tsx` applies the stored value before first paint to avoid a
+  flash of the wrong theme. First-time visitors with no stored value
+  default to dark (not OS-level `prefers-color-scheme`).
 - Fonts wired via `next/font`: Space Grotesk (display) + Source Sans 3 (body).
 - Visible keyboard focus ring + `prefers-reduced-motion` handling baked into
   `globals.css` globally, not per-component.
