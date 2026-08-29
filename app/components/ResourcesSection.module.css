@@ -124,6 +124,14 @@
 @media (max-width: 900px) {
   .columns {
     flex-direction: column;
+    /* .columns sets align-items: flex-start above for the desktop row
+       layout (stops the shorter column being stretched to match the
+       taller one) -- once stacked, that same value hugs .grid to its own
+       content width instead of spanning the container. Reset to the
+       flex default so both columns go full-width, matching how Contact's
+       equivalent wrapper (AboutContactSection's .inner) behaves by never
+       overriding align-items in the first place. */
+    align-items: stretch;
   }
   .intro {
     width: 100%;
