@@ -108,7 +108,8 @@ export default function AboutPage() {
                 >
                   UX Leadership and Influence course
                 </a>{' '}
-                (now titled UX Leadership and Influence with Jared Spool), and{' '}
+                (previously titled How to Win Stakeholders and Influence
+                Decisions), and{' '}
                 <a
                   href="/Data-Driven%20Design%20Certificate%20of%20Completion%20-%20Kevin%20Doyle%20ECb78e.pdf"
                   className={styles.inlineLink}
