@@ -1,11 +1,26 @@
 .header {
+  position: sticky;
+  top: 0;
+  /* First (and currently only) z-index in the codebase -- nothing else
+     stacks above content today, so this is unopposed. Revisit if a modal,
+     dropdown, or lightbox is added later; it should sit above this. */
+  z-index: 100;
   background: var(--surface);
   border-bottom: 1px solid var(--line-strong);
   width: 100%;
+  transition: box-shadow 0.2s ease;
+}
+
+/* Extra depth cue once content is actually scrolling underneath the
+   pinned header -- the border-bottom above is already always there, this
+   adds a soft shadow on top of it. color-mix keeps this token-driven
+   rather than hardcoding a new shadow color. */
+.headerScrolled {
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--ink) 18%, transparent);
 }
 
 .inner {
-  height: 72px;
+  height: var(--header-height);
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -39,6 +39,10 @@
 
   --layout-page-padding: 40px;
   --layout-max-width: 1160px;
+  /* SiteHeader is position: sticky -- referenced by its own height and by
+     scroll-margin-top on hash-anchor section targets so the sticky bar
+     doesn't cover the top of whatever they scroll to. */
+  --header-height: 72px;
   /* Matches the text column width already produced by the rail+body
      (Prose) and body+pull (BodyPull) two-column layouts at desktop, so
      a full-width paragraph block reads at the same line length as one

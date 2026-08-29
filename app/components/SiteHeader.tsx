@@ -17,8 +17,18 @@ function resolveStoredOrDefaultTheme(): 'dark' | 'light' {
 
 export default function SiteHeader() {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
   const isAbout = pathname?.startsWith('/about') ?? false;
+
+  // Small threshold (rather than > 0) avoids flicker from momentum-scroll
+  // rubber-banding at the very top on some browsers.
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 4);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // The root layout's bootstrap script (or a previous page's toggle) has
   // already applied the real theme to <html> before this ever mounts --
@@ -68,7 +78,11 @@ export default function SiteHeader() {
     };
 
   return (
-    <header className={styles.header}>
+    <header
+      className={
+        isScrolled ? `${styles.header} ${styles.headerScrolled}` : styles.header
+      }
+    >
       <div className={`container ${styles.inner}`}>
         <Link href="/" className={styles.wordmark}>
           Kevin B. Doyle

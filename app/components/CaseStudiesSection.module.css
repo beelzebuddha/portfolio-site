@@ -1,4 +1,8 @@
 .section {
+  /* Offsets the sticky SiteHeader so scrolling here (nav click or
+     smooth-scroll landing) doesn't leave the top of the section hidden
+     underneath it. */
+  scroll-margin-top: var(--header-height);
   border-bottom: 1px solid var(--line-strong);
   width: 100%;
   display: flex;
