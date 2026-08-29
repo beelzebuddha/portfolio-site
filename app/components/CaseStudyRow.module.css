@@ -60,6 +60,10 @@
 }
 
 .preview {
+  /* Now an <a> (was a plain div) -- needs an explicit display so it still
+     participates in .row's flex layout, sizes via flex: 1, and clips to
+     border-radius the same way the div did. */
+  display: block;
   flex: 1;
   min-width: 0;
   background: var(--surface);

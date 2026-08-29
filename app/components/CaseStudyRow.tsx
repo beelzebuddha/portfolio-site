@@ -37,7 +37,12 @@ export default function CaseStudyRow({
           Read the case study →
         </Link>
       </div>
-      <div className={styles.preview}>
+      <Link
+        href={href}
+        className={styles.preview}
+        aria-hidden="true"
+        tabIndex={-1}
+      >
         <Image
           src={imageSrc}
           alt={imageAlt}
@@ -46,7 +51,7 @@ export default function CaseStudyRow({
           quality={90}
           className={styles.image}
         />
-      </div>
+      </Link>
     </div>
   );
 }
