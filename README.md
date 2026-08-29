@@ -27,7 +27,9 @@ npm run format:check  # CI-friendly check, no writes
 ## What's done
 
 - Full Home page: header/nav with working dark↔light toggle, hero, stats
-  band, all five case study rows, resources grid, about/contact (real bio
+  band, four case study rows (Chassis CodeGen → DragOn UI Builder → AXA
+  Vantage → Rearview; Dev Insights isn't a Home row — it's linked
+  separately from the stats band), resources grid, about/contact (real bio
   copy + photo, pulled from Figma), footer.
 - All five case study pages built: Dev Insights (`179:1931`), Chassis
   CodeGen (`179:2184`), DragOn UI Builder (`733:834`), AXA Vantage
@@ -53,6 +55,11 @@ npm run format:check  # CI-friendly check, no writes
   collections (Primitives → Theme → Scale). Both Dark and Light mode alias
   values are now confirmed from Figma's Theme collection — the dark↔light
   toggle is trustworthy.
+- Theme choice now persists across navigation and reloads: the toggle
+  writes to `localStorage`, and a `beforeInteractive` bootstrap script in
+  `app/layout.tsx` applies the stored value (or, for first-time visitors,
+  the OS-level `prefers-color-scheme`) before first paint to avoid a flash
+  of the wrong theme.
 - Fonts wired via `next/font`: Space Grotesk (display) + Source Sans 3 (body).
 - Visible keyboard focus ring + `prefers-reduced-motion` handling baked into
   `globals.css` globally, not per-component.
@@ -60,8 +67,14 @@ npm run format:check  # CI-friendly check, no writes
 
 ## Before this goes live — do these first
 
-1. **Phosphor icons** aren't wired in yet — none appeared on the frames
-   pulled so far, but they'll be needed once we build pages that use them.
+1. **Font Awesome Pro (Sharp family)** icons aren't wired into the codebase
+   yet — none appeared on the frames pulled so far, but they'll be needed
+   once we build pages that use them.
+2. **`npm audit` reports 3 high-severity vulnerabilities** (`postcss`,
+   `sharp`), both transitive via `next`. A fix is available only via
+   `npm audit fix --force`, which upgrades to `next@16` (breaking change) —
+   deferred until that upgrade is planned deliberately rather than forced
+   in as a side effect.
 
 ## Deploying
 
