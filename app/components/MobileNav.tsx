@@ -11,6 +11,8 @@ export default function MobileNav({
   isOpen,
   onClose,
   isAbout,
+  isCaseStudiesActive,
+  isResourcesActive,
   theme,
   onToggleTheme,
   onCaseStudiesClick,
@@ -19,6 +21,8 @@ export default function MobileNav({
   isOpen: boolean;
   onClose: () => void;
   isAbout: boolean;
+  isCaseStudiesActive: boolean;
+  isResourcesActive: boolean;
   theme: 'dark' | 'light';
   onToggleTheme: () => void;
   onCaseStudiesClick: HashClickHandler;
@@ -91,9 +95,9 @@ export default function MobileNav({
           scroll={false}
           onClick={onCaseStudiesClick}
           className={
-            isAbout
-              ? styles.navLink
-              : `${styles.navLink} ${styles.navLinkActive}`
+            isCaseStudiesActive
+              ? `${styles.navLink} ${styles.navLinkActive}`
+              : styles.navLink
           }
           style={{ transitionDelay: delay(0) }}
         >
@@ -103,7 +107,11 @@ export default function MobileNav({
           href="/#resources"
           scroll={false}
           onClick={onResourcesClick}
-          className={styles.navLink}
+          className={
+            isResourcesActive
+              ? `${styles.navLink} ${styles.navLinkActive}`
+              : styles.navLink
+          }
           style={{ transitionDelay: delay(1) }}
         >
           Resources
