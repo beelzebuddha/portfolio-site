@@ -1,0 +1,88 @@
+.trigger {
+  all: unset;
+  display: block;
+  position: relative;
+  width: 100%;
+  cursor: zoom-in;
+}
+
+.trigger:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.badge {
+  position: absolute;
+  bottom: 11px;
+  right: 11px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--surface);
+  border: var(--stroke-card) solid var(--line-strong);
+  border-radius: var(--radius-chip);
+  padding: var(--space-1) var(--space-2);
+  font-family: var(--font-body), sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 1.65px;
+  color: var(--accent);
+  pointer-events: none;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-8);
+  background: rgba(10, 9, 8, 0.92);
+  animation: lightboxFadeIn 0.2s ease;
+}
+
+.close {
+  all: unset;
+  position: absolute;
+  top: var(--space-5);
+  right: var(--space-5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-control);
+  background: var(--surface);
+  border: var(--stroke-card) solid var(--line-strong);
+  cursor: pointer;
+}
+
+.close:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.stage {
+  position: relative;
+  max-width: 90vw;
+  max-height: 85vh;
+}
+
+.image {
+  max-width: 90vw;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+@keyframes lightboxFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

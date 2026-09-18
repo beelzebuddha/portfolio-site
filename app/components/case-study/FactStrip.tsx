@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import styles from './FactStrip.module.css';
 
 export default function FactStrip({
@@ -5,7 +6,7 @@ export default function FactStrip({
   borderTop = false,
   borderColor = 'line-strong',
 }: {
-  facts: { label: string; value: string }[];
+  facts: { label: string; value: ReactNode }[];
   borderTop?: boolean;
   borderColor?: 'line' | 'line-strong';
 }) {

@@ -3,6 +3,7 @@ import {
   faBars,
   faXmark,
   faUpRightFromSquare,
+  faMagnifyingGlass,
 } from '@fortawesome/sharp-regular-svg-icons';
 
 // Add entries here as new icons are needed elsewhere on the site --
@@ -13,6 +14,7 @@ const ICONS = {
   bars: faBars,
   xmark: faXmark,
   'up-right-from-square': faUpRightFromSquare,
+  'magnifying-glass': faMagnifyingGlass,
 } as const;
 
 export type IconName = keyof typeof ICONS;

@@ -1,0 +1,64 @@
+.row {
+  display: flex;
+  gap: var(--space-8);
+  align-items: flex-start;
+  width: 100%;
+}
+
+.imageSlot {
+  width: 650px;
+  flex-shrink: 0;
+  background: var(--panel);
+  border: var(--stroke-card) solid var(--line-strong);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+}
+
+.frame {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.caption {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.captionTitle {
+  font-family: var(--font-body), sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 30px;
+  color: var(--ink);
+}
+
+.captionBody {
+  font-family: var(--font-body), sans-serif;
+  font-size: 17px;
+  line-height: 28px;
+  color: var(--ink);
+}
+
+.captionNote {
+  font-family: var(--font-body), sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 1.65px;
+  color: var(--muted);
+}
+
+@media (max-width: 900px) {
+  .row {
+    flex-direction: column;
+  }
+  .imageSlot {
+    width: 100%;
+  }
+}
