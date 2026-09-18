@@ -153,7 +153,7 @@ export default function UsptoOpenDataPage() {
             <FigureWithCaption
               src={VISION_WIREFRAMES}
               alt="Home page concept wireframes from the Product Vision"
-              aspectRatio="1433/4096"
+              aspectRatio="4/3"
               width={1433}
               height={4096}
               captionTitle="Home page concept from the Product Vision."
@@ -171,7 +171,7 @@ export default function UsptoOpenDataPage() {
             <FigureWithCaption
               src={WHITEBOARD_JAD}
               alt="Whiteboard sketch from a home page JAD session"
-              aspectRatio="4032/3024"
+              aspectRatio="4/3"
               width={4032}
               height={3024}
               zoomable={false}
@@ -188,7 +188,7 @@ export default function UsptoOpenDataPage() {
             <FigureWithCaption
               src={SITEMAP}
               alt="Site map of the Open Data Portal"
-              aspectRatio="1920/2152"
+              aspectRatio="4/3"
               width={1920}
               height={2152}
               captionTitle="Open Data Portal site map."
@@ -203,7 +203,7 @@ export default function UsptoOpenDataPage() {
             <FigureWithCaption
               src={FINAL_HOME_DESIGN}
               alt="Final visual design for the Open Data Portal home page"
-              aspectRatio="984/4096"
+              aspectRatio="4/3"
               width={984}
               height={4096}
               captionTitle="Final visual design for the home page."
@@ -217,7 +217,9 @@ export default function UsptoOpenDataPage() {
           </div>
         </section>
 
-        <section className={`${styles.section} ${styles.py10}`}>
+        <section
+          className={`${styles.section} ${styles.py10} ${styles.bgSurface}`}
+        >
           <div className={`container ${styles.inner}`}>
             <p className={styles.sectionTitle}>What the vision earned.</p>
             <div className={styles.body}>
@@ -241,7 +243,7 @@ export default function UsptoOpenDataPage() {
             <FigureWithCaption
               src={MICHELLE_LEE_LETTER}
               alt="A personal letter from Michelle Lee, then-Director of USPTO"
-              aspectRatio="650/488"
+              aspectRatio="4/3"
               width={650}
               height={488}
               captionTitle="A personal letter from Michelle Lee, then-Director of USPTO."
