@@ -228,8 +228,8 @@ export default function DragonUiBuilderPage() {
         </section>
 
         <EndCTA
-          nextTitle="AXA Vantage Agent Portal"
-          nextHref="/case-studies/axa-vantage"
+          nextTitle="USPTO Open Data Initiative"
+          nextHref="/case-studies/uspto-open-data"
         />
       </main>
       <SiteFooter />
