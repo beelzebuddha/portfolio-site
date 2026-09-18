@@ -4,6 +4,7 @@ import styles from './CaseStudiesSection.module.css';
 
 const CHASSIS_IMG = '/images/home/chassis-thumb.png';
 const DRAGON_IMG = '/images/home/dragon-thumb.png';
+const USPTO_IMG = '/images/home/uspto-thumb.png';
 const AXA_IMG = '/images/home/axa-thumb.png';
 const REARVIEW_IMG = '/images/home/rearview-thumb.png';
 
@@ -29,6 +30,15 @@ export default function CaseStudiesSection() {
           summary="A drag-and-drop UI builder that lets developers assemble interfaces from live components and generate design-system-aligned code by construction. I led the UX work that turned a hard-to-use open-source foundation into a tool teams chose to adopt across the organization."
           imageSrc={DRAGON_IMG}
           imageAlt="Screenshot of the DragOn UI Builder component palette"
+        />
+        <CaseStudyRow
+          company="CGI FEDERAL"
+          title="USPTO Open Data Initiative"
+          href="/case-studies/uspto-open-data"
+          tags={['Federal Platform', 'Product Vision', 'Information Architecture']}
+          summary="Led the product vision for USPTO's Open Data Initiative — a federal mandate to make the agency's entire “treasure trove” of patent and trademark data public, with no market alternative to fall back on if it got it wrong. Shipped ahead of schedule; the platform ran for nearly a decade before evolving into USPTO's current system."
+          imageSrc={USPTO_IMG}
+          imageAlt="Screenshot of the USPTO Open Data Portal home page"
         />
         <CaseStudyRow
           company="HUGE"
