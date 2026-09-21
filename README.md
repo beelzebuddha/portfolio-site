@@ -27,13 +27,14 @@ npm run format:check  # CI-friendly check, no writes
 ## What's done
 
 - Full Home page: header/nav with working dark↔light toggle, hero, stats
-  band, four case study rows (Chassis CodeGen → DragOn UI Builder → AXA
-  Vantage → Rearview; Dev Insights isn't a Home row — it's linked
-  separately from the stats band), resources grid, about/contact (real bio
-  copy + photo, pulled from Figma), footer.
-- All five case study pages built: Dev Insights (`179:1931`), Chassis
+  band, five case study rows (Chassis CodeGen → DragOn UI Builder → AXA
+  Vantage → Rearview → USPTO Open Data Initiative; Dev Insights isn't a
+  Home row — it's linked separately from the stats band), resources grid,
+  about/contact (real bio copy + photo, pulled from Figma), footer.
+- All six case study pages built: Dev Insights (`179:1931`), Chassis
   CodeGen (`179:2184`), DragOn UI Builder (`733:834`), AXA Vantage
-  (`292:3404`), Rearview (`303:4066`).
+  (`292:3404`), Rearview (`303:4066`), USPTO Open Data Initiative
+  (`1108:1850`).
 - About page built (`/about`, node `509:4462`): hero with portrait, fact
   strip, bio copy with a contact aside, end CTA into the Dev Insights case
   study. Bio copy synced with the current Figma text, including inline
@@ -60,21 +61,22 @@ npm run format:check  # CI-friendly check, no writes
   `app/layout.tsx` applies the stored value before first paint to avoid a
   flash of the wrong theme. First-time visitors with no stored value
   default to dark (not OS-level `prefers-color-scheme`).
+- `SiteHeader`'s Case Studies/Resources nav underline is driven by a real
+  scroll-spy (IntersectionObserver-based), not a hardcoded active state.
 - Fonts wired via `next/font`: Space Grotesk (display) + Source Sans 3 (body).
 - Visible keyboard focus ring + `prefers-reduced-motion` handling baked into
   `globals.css` globally, not per-component.
 - Vercel Analytics (`@vercel/analytics`) wired into the root layout.
+- `npm audit` is clean (0 vulnerabilities). `package.json` pins a
+  `postcss` override (`^8.5.23`) since `next@15.5.x` bundles an
+  older, vulnerable `postcss` internally; the override can be dropped
+  once we're on `next@16`.
 
 ## Before this goes live — do these first
 
 1. **Font Awesome Pro (Sharp family)** icons aren't wired into the codebase
    yet — none appeared on the frames pulled so far, but they'll be needed
    once we build pages that use them.
-2. **`npm audit` reports 3 high-severity vulnerabilities** (`postcss`,
-   `sharp`), both transitive via `next`. A fix is available only via
-   `npm audit fix --force`, which upgrades to `next@16` (breaking change) —
-   deferred until that upgrade is planned deliberately rather than forced
-   in as a side effect.
 
 ## Deploying
 
