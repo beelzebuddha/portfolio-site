@@ -31,7 +31,7 @@ export default function RearviewPage() {
           company="HUGE"
           category="PLATFORM DESIGN"
           title="Rearview Engineering Platform"
-          dek="When a deal was live, an outage didn't defer revenue — it deleted it. I designed the monitoring tool engineers used to see system health at a glance and act before small failures cascaded — built in direct partnership with the engineers who'd live in it."
+          dek="When a deal was live, an outage didn't defer revenue — it stopped it in its tracks. I designed the monitoring tool engineers used to see system health at a glance and act before small failures cascaded — built in direct partnership with the engineers who'd live in it."
           tags={[
             'Platform Design',
             'Developer Experience',
@@ -133,7 +133,7 @@ export default function RearviewPage() {
                 carries no ambiguity about what it is or whether it can wait.
               </p>
               <p className={styles.bodyText}>
-                The finding changed what I designed for. If the alert
+                The finding changed what we originally planned for. If the alert
                 channel&apos;s value is unambiguous meaning, then the
                 tool&apos;s job on arrival is to preserve that clarity rather
                 than dump the engineer into a wall of graphs. So the entry point
@@ -144,8 +144,7 @@ export default function RearviewPage() {
                 oriented could work.
               </p>
               <p className={styles.bodyText}>
-                I did not get that from asking engineers what they wanted. I got
-                it from watching which alert they answered first.
+                I did not get that from asking engineers what they wanted. I got it from tracking which alert they answered first.  
               </p>
             </div>
             <Figure

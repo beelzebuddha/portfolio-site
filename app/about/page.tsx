@@ -29,7 +29,7 @@ export default function AboutPage() {
             {
               label: 'RECENTLY',
               value:
-                'Product Design Lead, Enterprise Developer Experience, Fannie Mae',
+                'Product Designer & Team Lead, Enterprise Developer Experience, Fannie Mae',
             },
             {
               label: 'PRACTICE',
@@ -39,7 +39,7 @@ export default function AboutPage() {
             {
               label: 'CREDENTIALS',
               value:
-                'Certified Usability Analyst (HFI); Certified Scrum Master (Scrum Alliance); BFA, Virginia Commonwealth University',
+                'Certified Usability Analyst (HFI); Certified Scrum Master (Scrum Alliance); BFA, Art Education, Virginia Commonwealth University',
             },
           ]}
         />
@@ -48,43 +48,19 @@ export default function AboutPage() {
           <div className={`container ${styles.inner}`}>
             <div className={styles.body}>
               <p>
-                From very early on I have been designing internal tools and
-                portals for financial services and membership organizations —
-                Capital One, Navy Federal, Credit Suisse, AARP — where a
-                confusing screen didn&apos;t cost a conversion, it cost someone
-                an hour a day for the rest of their tenure.
+                From very early on in my career I have designed websites, web apps, and internal tools across federal government (Medicare, USPTO) and Fortune 500 enterprises (Marriott, Capital One, Freddie Mac, Credit Suisse) — plus mission-driven organizations like PBS, AARP, and Navy Federal. What stuck with me wasn't the client roster; it was learning to move fluently between design and development teams, product owners, and C-level stakeholders — the same range I still lean on leading cross-functional teams today. It's also where I first noticed the pattern that still shapes my work: the people using these systems didn't choose them. They were captive customers, and that changed what "good design" had to mean.
               </p>
               <p>
-                At CGI Federal I spent seven years directing UX for public
-                platforms, including the Medicare.gov Compare Tools and
-                USPTO&apos;s Open Data Initiative, where accessibility and
-                regulatory compliance were the standard. I arrived as a User
-                Experience Manager and left as a Consulting Director. More
-                recently, I led the product design and customer research for
-                Enterprise Developer Experience at Fannie Mae, where 3,000+
-                engineers depend on internal platforms I designed and helped
-                improve.
+               At CGI Federal I spent seven years in UX leadership on federal platforms, including the Medicare.gov Physician Compare tool and USPTO's Open Data Initiative — work where accessibility and regulatory compliance weren't optional, they were the baseline. I arrived as a [confirm: User Experience Lead] and left as a Consulting Director. More recently, I led product design and customer research for Enterprise Developer Experience at Fannie Mae, where 3,000+ engineers depended on the internal platforms I designed and helped improve.
               </p>
               <p>
-                The captive-user problem has one honest fix: build the feedback
-                channel yourself, because the market won&apos;t hand you one.
-                That&apos;s what Dev Insights is. I founded it as a 45-developer
-                panel with no mandate and grew it to 450 through org-wide
-                Snapshot surveys built on the DX Core 4 framework. The findings
-                didn&apos;t stop at a readout — they became CIO-level OKRs and
-                the priorities behind an internal developer platform. As product
-                owner for Stack Overflow Enterprise, I ran the engagement
-                program that grew activity 125% and returned 21,000+
-                developer-hours a year.
+               While at Fannie Mae, I founded Dev Insights — a Voice-of-Customer program that started as a 45-developer panel and grew into a network of 450 engineers actively weighing in on their own work experience. I built it because developer feedback deserved a structured, ongoing channel instead of ad hoc asks — so we ran focus groups, 1:1 interviews, design reviews, usability testing, and a quarterly survey. The findings didn't stop at a report: they became CIO-level OKRs and shaped what our internal developer platform prioritized next. As product owner for Stack Overflow Enterprise, I also ran the developer engagement and enablement program, growing activity 125% and returning 121,000+ developer-hours a quarter.
+              </p>
+              <p> 
+                My design process has evolved to bridge design and engineering more directly. I start in Figma, using its agent features to move fast through exploration, then connect out through MCP to a working prototype in VS Code — where I use Claude Code to add real interactions, tune micro-interactions, and get the build close to production-ready. From there it's a loop: back to Figma to refine, back to code to test it live, until the design holds up under real interaction, not just a click-through. It's a workflow built for handoff — by the time engineering picks it up, most of the ambiguity is already gone.
               </p>
               <p>
-                How I lead is mostly player-coach. I&apos;ve directed
-                cross-functional teams of eight to twelve, mentored designers,
-                governed design systems across multiple products, and run design
-                for programs where I was the only designer in the room. Most of
-                the authority I&apos;ve had came from evidence rather than
-                reporting lines. I&apos;d rather say that plainly than dress it
-                up.
+                My leadership approach is deeply rooted in my education background — the same techniques that got a room of art students to critique each other's work honestly and push past their first draft are the ones I use to get cross-functional teams of engineers, product managers, and designers to do the same. Over the course of my career, I've led cross-functional teams of eight to twelve and governed design systems across multiple products and organizations. Outside work, I ran a UX Dinner Meetup for the NoVA/DC design community for years — mentoring dozens of designers who were looking for guidance I was glad to give.
               </p>
               <p>
                 I hold a BFA from Virginia Commonwealth University, a{' '}

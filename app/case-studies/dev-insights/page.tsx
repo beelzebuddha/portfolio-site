@@ -59,7 +59,7 @@ export default function DevInsightsPage() {
               <div className={styles.rail}>
                 <p className={styles.railLabel}>BUILT FROM THE BOTTOM UP</p>
                 <p className={styles.railIntro}>
-                  Everyone knew developers were hitting friction. Nobody could
+                  Everyone knew developers were hitting friction, but no one could
                   say where the worst of it was.
                 </p>
                 <OrgChart45 />
@@ -101,7 +101,7 @@ export default function DevInsightsPage() {
               </div>
             </div>
             <Aside label="THE TRADEOFF">
-              Referral sampling surfaced the visible and the well-connected data. I
+              Referral sampling surfaced the visible and the well-connected data, and I
               used active directory data to check coverage across all seven
               technology organizations and corrected for gaps as the panel grew.
             </Aside>
@@ -127,7 +127,7 @@ export default function DevInsightsPage() {
                 'Speak up in group activities; no one is silent',
                 'Maintain access to the tools we work in: Mural, Figma, and others',
                 'Talk to fellow developers about their friction points and report back',
-                'Cameras on during recorded sessions',
+                'Cameras on during our online sessions',
               ]}
             />
             <p className={styles.intro}>

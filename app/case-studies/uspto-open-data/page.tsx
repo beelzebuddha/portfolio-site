@@ -31,7 +31,7 @@ export default function UsptoOpenDataPage() {
           company="CGI FEDERAL"
           category="PORTAL DESIGN"
           title="USPTO Open Data Initiative"
-          dek="In the summer of 2015 – my first large project after joining CGI – the USPTO tasked me with leading the design vision for a federal mandate: make the agency's “treasure trove” of patent and trademark data open, machine-readable, and usable by the public. I spent three months defining the product vision and information architecture with senior USPTO stakeholders ahead of development that September, then kept running weekly JAD sessions and supporting the project through its release the following summer."
+          dek="In the summer of 2015 – my first large project after joining CGI – USPTO tasked me with leading the design vision for a federal mandate: make the agency's “treasure trove” of patent and trademark data open, machine-readable, and usable by the public. I spent three months defining the product vision and information architecture with senior USPTO stakeholders ahead of development that September, then kept running weekly JAD sessions and supporting the project through its release the following summer."
           tags={[
             'Federal Platform',
             'Product Vision',
@@ -175,13 +175,13 @@ export default function UsptoOpenDataPage() {
               width={4032}
               height={3024}
               zoomable={false}
-              captionTitle="Whiteboard from the home page JAD session."
+              captionTitle="Whiteboard from a JAD session for the home page."
             >
               <p className={styles.bodyText}>
                 Once development started, the stakeholders and I met weekly
                 to discuss concepts and direction so we could quickly move to
                 design. This allowed us to refine the design several Sprints
-                ahead of development.
+                ahead of development
               </p>
             </FigureWithCaption>
 
@@ -235,8 +235,7 @@ export default function UsptoOpenDataPage() {
                 when nothing in the market was forcing the issue.
               </p>
               <p className={styles.bodyText}>
-                The clearest proof of that isn&apos;t a metric. It&apos;s
-                this:
+                The clearest proof of that isn&apos;t always a metric. Sometimes it's a personal letter from the agency director, thanking you for helping them meet a federal mandate that will outlast your time there.
               </p>
             </div>
 
@@ -246,7 +245,7 @@ export default function UsptoOpenDataPage() {
               aspectRatio="4/3"
               width={650}
               height={488}
-              captionTitle="A personal letter from Michelle Lee, then-Director of USPTO."
+              captionTitle="A personal thank-you letter from Michelle Lee, then-Director of USPTO."
             />
           </div>
         </section>
