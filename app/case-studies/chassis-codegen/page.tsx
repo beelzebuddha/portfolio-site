@@ -63,7 +63,7 @@ export default function ChassisCodeGenPage() {
               src={SCREENSHOT_CHASSIS}
               alt="Screenshot of the Chassis CodeGen catalog and cart"
               aspectRatio="1080/768"
-              caption='Developers add and remove components from their project's cart. Service names are anonymized.'
+              caption="Developers add and remove components from their project's cart. Service names are anonymized."
             />
           </div>
         </section>
