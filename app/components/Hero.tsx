@@ -17,7 +17,7 @@ export default function Hero() {
            The captive customer is the employee - the person who uses software all day and never got to choose it.
           </p>
           <p>
-            I've spent my career on complex, data-heavy enterprise applications -- internal operational tools, regulated financial systems, federal platforms, and most recently the tools engineers build with.
+            I've spent my career on complex, data-heavy enterprise applications - internal operational tools, regulated financial systems, federal platforms, and most recently the tools engineers build with.
           </p>
         </div>
       </div>
