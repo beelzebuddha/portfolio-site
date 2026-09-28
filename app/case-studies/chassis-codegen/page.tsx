@@ -28,18 +28,18 @@ export default function ChassisCodeGenPage() {
       <SiteHeader />
       <main>
         <CaseStudyHero
-          breadcrumb="Application design"
+          breadcrumb="Platform Design"
           company="FANNIE MAE"
           category="PLATFORM DESIGN"
           title="Chassis CodeGen"
-          dek="Dozens of service components, each needing its own customization form. Designing them one at a time would have spent the platform's entire design capacity on a single tool. So I designed the application, the component and pattern library and taught the basics of form design to the dev team, and moved from drafting every screen to approving them at sprint review."
+          dek="To use one Chassis component, a developer had to download all 55. I redesigned the catalog into a browse, configure, and download experience, so teams get only what they need, ready to run. The customization forms were a second problem: new components arrived on engineering's schedule, not mine. So I wrote the form guidance developers built from, and moved from drafting every screen to approving them at sprint review."
           tags={['Platform Design', 'Developer Experience', 'Visual Design']}
         />
 
         <FactStrip
           borderColor="line"
           facts={[
-            { label: 'ROLE', value: 'Product designer, platform' },
+            { label: 'ROLE', value: 'Design lead, platform' },
             {
               label: 'SCOPE',
               value: '55-component microservice “shopping cart” catalog',
@@ -49,8 +49,8 @@ export default function ChassisCodeGenPage() {
               value: 'Chassis engineering, service teams',
             },
             {
-              label: 'ALSO OWNED',
-              value: 'Stack Overflow instance, Chassis Confluence space',
+              label: 'ALSO LED',
+              value: 'Stack Overflow Enterprise engagement, Chassis Confluence space',
             },
           ]}
         />
@@ -63,7 +63,7 @@ export default function ChassisCodeGenPage() {
               src={SCREENSHOT_CHASSIS}
               alt="Screenshot of the Chassis CodeGen catalog and cart"
               aspectRatio="1080/768"
-              caption='Developers can add and remove microservice components to their project "shopping cart". The microservice names are anonymized for confidentiality.'
+              caption='Developers add and remove components from their project's cart. Service names are anonymized.'
             />
           </div>
         </section>
@@ -76,7 +76,7 @@ export default function ChassisCodeGenPage() {
               <div className={styles.rail}>
                 <p className={styles.railLabel}>WHERE IT STARTED</p>
                 <p className={styles.railIntro}>
-                  Nobody picked Chassis's microservices but everyone had to use them.
+                  Nobody picked Chassis's microservices, but everyone had to use them.
                 </p>
               </div>
               <div className={styles.body}>
@@ -98,10 +98,7 @@ export default function ChassisCodeGenPage() {
                   know where to look for.
                 </p>
                 <p className={styles.bodyText}>
-                  Nobody picked Chassis but every team needed to use it if they 
-                  wanted to use any kind of microservice. All the little steps 
-                  required to use those components added up and that extra time 
-                  affected every team, on every service, every time.
+                  That work landed on every team, on every service, every time.
                 </p>
               </div>
             </div>
@@ -113,7 +110,7 @@ export default function ChassisCodeGenPage() {
         >
           <div className={`container ${styles.inner}`}>
             <p className={styles.sectionTitle}>
-              A one-stop shop for the back-end
+              One catalog for the back end
             </p>
             <div className={`${styles.body} measure-prose`}>
               <p className={styles.mutedText}>
@@ -142,21 +139,21 @@ export default function ChassisCodeGenPage() {
                   alt: 'Screenshot of the component configuration side panel',
                   aspectRatio: '393/1024',
                   caption:
-                    'Step 1, configuring a component - configuring here means time saved later',
+                    'Step 2, configuring a component - configuring here means time saved later',
                 },
                 {
                   src: SCREENSHOT_METADATA,
                   alt: 'Screenshot of the project metadata side panel',
                   aspectRatio: '393/1024',
                   caption:
-                    'Step 2, adding project metadata - by adding it here, it adds the data to all the files in the package.',
+                    'Step 3, adding project metadata - by adding it here, it adds the data to all the files in the package.',
                 },
                 {
                   src: SCREENSHOT_DOWNLOAD,
                   alt: 'Screenshot of the download review side panel',
                   aspectRatio: '393/1024',
                   caption:
-                    "Step 3, review the package is listed before it's packaged.",
+                    "Step 4, review the package is listed before it's packaged.",
                 },
               ]}
             />
@@ -167,7 +164,7 @@ export default function ChassisCodeGenPage() {
           className={`${styles.section} ${styles.py10} ${styles.borderBottom}`}
         >
           <div className={`container ${styles.inner}`}>
-            <p className={styles.sectionTitle}>Working with a dev team</p>
+            <p className={styles.sectionTitle}>Designing for components that didn't exist yet</p>
             <BodyPull
               body={
                 <>
@@ -191,7 +188,7 @@ export default function ChassisCodeGenPage() {
                   </p>
                 </>
               }
-              pull="As a lead designer, teach your developers design basics so you can focus on what's important: the experience."
+              pull="Teaching developers the basics of form design freed me for the part only I could do: the experience."
             />
           </div>
         </section>
@@ -200,7 +197,7 @@ export default function ChassisCodeGenPage() {
           className={`${styles.section} ${styles.py10} ${styles.bgSurface} ${styles.borderBottom}`}
         >
           <div className={`container ${styles.inner}`}>
-            <p className={styles.sectionTitle}>Beyond the design...</p>
+            <p className={styles.sectionTitle}>One home for the documentation</p>
             <div className={`${styles.body} measure-prose`}>
               <p className={styles.mutedText}>
                 Documentation was the part I could not design my way out of. Before Chassis CodeGen, documentation was in a spread of locations across

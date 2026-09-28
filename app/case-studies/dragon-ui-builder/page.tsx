@@ -17,7 +17,7 @@ const SCREENSHOT_COMPONENTS =
 export const metadata: Metadata = {
   title: 'DragOn UI Builder — Kevin B. Doyle',
   description:
-    'How a hard-to-use open-source Angular foundation became a drag-and-drop UI builder that solved onboarding, concept collaboration, and a lack of design support with one small tool developers chose to adopt.',
+    'How a drag-and-drop Angular UI builder solved onboarding, concept collaboration, and a lack of design support -- one small tool developers chose to adopt.',
 };
 
 export default function DragonUiBuilderPage() {
@@ -30,14 +30,14 @@ export default function DragonUiBuilderPage() {
           company="FANNIE MAE"
           category="PLATFORM DESIGN"
           title="DragOn UI Builder"
-          dek="DragOn helped solve three problems: project onboarding for new and junior developers inefficiency, supportive tools for concept collaboration, and a lack of design support. DragOn became the design support they didn't have: new developers learned our Angular system by dragging its real components into place, developers and product managers built and shared working concepts without writing a line of code, and daily stand-ups turned into the place dev teams built the UI instead of just talking about it."
+          dek="DragOn solved three problems at once: slow onboarding for new and junior developers, no shared way to work through a UI concept, and product teams with no designer. New developers learned our Angular system by dragging its real components into place. Developers and product managers built and shared working concepts without writing code. Some teams started building UI together right after stand-up."
           tags={['Platform Design', 'Developer Experience', 'Visual Design']}
         />
 
         <FactStrip
           borderColor="line"
           facts={[
-            { label: 'ROLE', value: 'Product designer, platform' },
+            { label: 'ROLE', value: 'Design lead, platform' },
             {
               label: 'SCOPE',
               value:
@@ -45,7 +45,7 @@ export default function DragonUiBuilderPage() {
             },
             {
               label: 'PARTNERS',
-              value: 'Team product manager and development team',
+              value: 'Product manager, development team',
             },
             {
               label: 'ALSO DESIGNED',
@@ -62,7 +62,7 @@ export default function DragonUiBuilderPage() {
               src={SCREENSHOT_START}
               alt="Screenshot of the DragOn UI Builder build area"
               aspectRatio="1922/1026"
-              caption="Developers can drag and drop components onto the build area and start configuring their application's layout."
+              caption="Developers drag components onto the build area and start configuring the layout."
             />
           </div>
         </section>
@@ -75,23 +75,15 @@ export default function DragonUiBuilderPage() {
               <div className={styles.rail}>
                 <p className={styles.railLabel}>WHERE IT STARTED</p>
                 <p className={styles.railIntro}>
-                  Dev teams needed to be more efficient starting up their
-                  projects
+                  Most teams had no designer and no way into the design system.
                 </p>
               </div>
               <div className={styles.body}>
                 <p className={styles.lede}>
-                  New and junior developers had no way into the design system
-                  that didn&apos;t start with weeks of documentation. Teams
-                  without a dedicated designer — most of them — had no way to
-                  build or share a real interface concept without me.
+                  New and junior developers had no way into the design system that didn't start with weeks of documentation. Teams without a dedicated designer - most of them - had no way to build or share a real interface concept without me.
                 </p>
                 <p className={styles.bodyText}>
-                  And teams that hit a UI question mid-sprint had no way to work
-                  through it together that produced anything by the time the
-                  conversation ended. DragOn became the answer to all three,
-                  which is a stranger thing for one small tool to be than it
-                  sounds.
+                  And teams that hit a UI question mid-sprint had no way to work through it together that produced anything by the time the conversation ended. DragOn answered all three.
                 </p>
               </div>
             </div>
@@ -107,40 +99,23 @@ export default function DragonUiBuilderPage() {
             </p>
             <div className={`${styles.body} measure-prose`}>
               <p className={styles.mutedText}>
-                The usual path onto a new team looked the same everywhere: read
-                the design system documentation, guess at how a component was
-                supposed to behave, submit something, and find out in code
-                review what you&apos;d gotten wrong. That loop worked,
-                eventually, but it put the correction after the mistake instead
-                of before it — and on a team with no designer to catch things
-                early, code review was often the first time anyone looked
-                closely at whether an interface decision was right.
+                The usual path onto a new team looked the same everywhere: read the design system documentation, guess at how a component was supposed to behave, submit something, and find out in code review what you'd gotten wrong. That loop worked, eventually, but it put the correction after the mistake instead of before it - and on a team with no designer to catch things early, code review was often the first time anyone looked closely at whether an interface decision was right.
               </p>
               <p className={styles.mutedText}>
-                DragOn moved that correction earlier. A new developer&apos;s
-                first contact with the design system wasn&apos;t a page of
-                documentation, it was the system itself, already configured
-                correctly, sitting in a build area they could drag pieces into.
-                The tool only offered the components and settings the system
-                actually supported, so there was no version of &quot;wrong&quot;
-                to accidentally build — the constraints that would normally
-                surface as review comments were just the boundaries of what the
-                builder let you do. Someone could learn what a correct interface
-                looked like by assembling one, before they&apos;d written a line
-                of code anyone else had to fix.
+                DragOn moved that correction earlier. A new developer's first contact with the design system was the system itself, configured correctly, in a build area they could drag pieces into. The builder only offered the components and settings the system supported, so the constraints that usually surface as review comments became the edges of the tool. Developers learned what a correct interface looked like by assembling one, before writing code anyone had to fix.
               </p>
             </div>
             <Figure
               src={SCREENSHOT_SETTINGS}
               alt="Screenshot of the DragOn UI Builder settings panel"
               aspectRatio="1920/1024"
-              caption="Once the component is in the build area, the developer can adjust the UI in the Settings panel."
+              caption="Once a component is in the build area, the developer adjusts it in the Settings panel."
             />
             <Figure
               src={SCREENSHOT_MODALS}
               alt="Screenshot of the DragOn UI Builder export and share modals"
               aspectRatio="1449/540"
-              caption="Developers could copy and paste the code from DragOn directly into their IDE, share a link to the DragOn UI with someone, and save the project for later."
+              caption="Developers could copy the code straight into their IDE, share a link to the concept, or save the project for later."
               bare
             />
           </div>
@@ -150,7 +125,7 @@ export default function DragonUiBuilderPage() {
           className={`${styles.section} ${styles.py10} ${styles.borderBottom}`}
         >
           <div className={`container ${styles.inner}`}>
-            <p className={styles.sectionTitle}>Lack of design team support</p>
+            <p className={styles.sectionTitle}>No designer on the team</p>
             <div className={styles.bodyPullRow}>
               <div className={styles.body}>
                 <p className={styles.mutedText}>
@@ -176,7 +151,7 @@ export default function DragonUiBuilderPage() {
                   src={SCREENSHOT_COMPONENTS}
                   alt="Screenshot of the DragOn UI Builder custom component icon set"
                   aspectRatio="524/418"
-                  caption="I wanted the icons to be as simplified as possible yet immediately recognizable as the component they represented."
+                  caption="I simplified each icon as far as it could go while staying recognizable as its component."
                   sizes="(min-width: 1240px) 508px, (min-width: 900px) calc((100vw - 144px) / 2), calc(100vw - 40px)"
                   bare
                 />
@@ -196,12 +171,7 @@ export default function DragonUiBuilderPage() {
               body={
                 <>
                   <p className={styles.mutedText}>
-                    Plenty of teams ran into a UI question they couldn&apos;t
-                    answer by talking about it. We reached out to several teams
-                    that our metrics noted high DragOn usage — several teams
-                    stated that they started using DragOn after their morning
-                    stand-up to work through UI obstacles together, live, in a
-                    shared screen session.
+                    Plenty of teams ran into a UI question they couldn&apos;t answer by talking about it. We reached out to teams our metrics showed as heavy DragOn users. Several said they'd started opening DragOn after morning stand-up to work through UI problems together in a shared screen.
                   </p>
                   <p className={styles.mutedText}>
                     That&apos;s a different use than the one I designed for. I
@@ -211,18 +181,16 @@ export default function DragonUiBuilderPage() {
                     next meeting didn&apos;t have to redo.
                   </p>
                   <p className={styles.mutedText}>
-                    A tool built to cover design work no single designer could
-                    ever have reached ended up being the thing three different
-                    roles could stand in front of at once.
+                    A tool built to stand in for a designer ended up being something three roles could stand in front of at once.
                   </p>
                   <p className={styles.mutedText}>
-                    Methods in rotation: component and icon design — interaction
+                    What I designed: component and icon design — interaction
                     design for the build/configure/export flow —
                     collaborative-link sharing — code export to working Angular.
                   </p>
                 </>
               }
-              pull="Several teams stated that they started using DragOn after their morning stand-up to work through UI obstacles together, live, in a shared screen session."
+              pull="Nobody had to use DragOn. Teams chose it."
             />
           </div>
         </section>
