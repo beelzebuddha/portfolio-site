@@ -19,7 +19,7 @@ export default function StatsBand() {
           <div className={styles.cell}>
             <StatColumn
               label="EFFICIENCY"
-              lead="Saved 21,000+ developer-hours annually"
+              lead="Saved 21,000+ developer-hours quarterly over two years"
               continuation="by applying customer research principles to product engagement"
             />
           </div>
