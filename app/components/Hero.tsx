@@ -14,7 +14,7 @@ export default function Hero() {
         </h1>
         <div className={styles.intro}>
           <p className={styles.muted}>
-           The captive customer is the employee - the person who uses software all day and never got to choose it.
+           The captive customer is the employee - the person who uses enterprise applications all day and never gets a say in how they are designed.
           </p>
           <p>
             I've spent my career on complex, data-heavy enterprise applications - internal operational tools, regulated financial systems, federal platforms, and most recently the tools engineers build with.

@@ -28,7 +28,7 @@ export default function StatsBand() {
             <StatColumn
               label="RESEARCH"
               lead="Led org-wide survey initiative"
-              continuation="which led to 12-25% improvements in deep work and build and release drivers across org"
+              continuation="which led to 12-25% improvements in deep work and build and test drivers across org"
             />
           </div>
         </div>
