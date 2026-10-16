@@ -4,6 +4,7 @@ import SiteFooter from '../components/SiteFooter';
 import AboutHero from '../components/AboutHero';
 import FactStrip from '../components/case-study/FactStrip';
 import ContactCard from '../components/ContactCard';
+import CredentialsCard from '../components/CredentialsCard';
 import EndCTA from '../components/case-study/EndCTA';
 import styles from './page.module.css';
 
@@ -63,47 +64,6 @@ export default function AboutPage() {
                 My leadership approach is deeply rooted in my education background — the same techniques that got a room of art students to critique each other's work honestly and push past their first draft are the ones I use to get cross-functional teams of engineers, product managers, and designers to do the same. Over the course of my career, I've led cross-functional teams of eight to twelve and governed design systems across multiple products and organizations. Outside work, I ran a UX Dinner Meetup for the NoVA/DC design community for years — mentoring dozens of designers who were looking for guidance I was glad to give.
               </p>
               <p>
-                I hold a BFA from Virginia Commonwealth University, a{' '}
-                <a
-                  href="/Kevin%20CUA%20certificate_Compressed.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.inlineLink}
-                >
-                  Certified Usability Analyst credential
-                </a>{' '}
-                from Human Factors International, and a{' '}
-                <a
-                  href="/Kevin%20B.%20Doyle-ScrumAlliance_CSM_Certificate.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.inlineLink}
-                >
-                  Certified Scrum Master certification
-                </a>{' '}
-                from Scrum Alliance. More recently: Jared Spool&apos;s{' '}
-                <a
-                  href="/Win_Stakeholders_Influence_Decisions_cert.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.inlineLink}
-                >
-                  UX Leadership and Influence course
-                </a>{' '}
-                (previously titled How to Win Stakeholders and Influence
-                Decisions), and{' '}
-                <a
-                  href="/Data-Driven%20Design%20Certificate%20of%20Completion%20-%20Kevin%20Doyle%20ECb78e.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.inlineLink}
-                >
-                  Data-Driven Design
-                </a>{' '}
-                and Advanced Figma with DesignLab. I&apos;m also a founding
-                member of Fannie Mae&apos;s Enterprise Accessibility Council.
-              </p>
-              <p>
                 Outside of work I sketch in charcoal, play guitar, hike when the
                 weather cooperates, watch too much TV with my cats, and spend
                 long weekends around a campfire with my camping fam.
@@ -111,6 +71,7 @@ export default function AboutPage() {
             </div>
             <div className={styles.aside}>
               <ContactCard />
+              <CredentialsCard />
             </div>
           </div>
         </section>

@@ -18,7 +18,7 @@ const MICHELLE_LEE_LETTER = '/images/uspto-open-data/michelle-lee-letter.jpg';
 export const metadata: Metadata = {
   title: 'USPTO Open Data Initiative — Kevin B. Doyle',
   description:
-    "How three months in a war room with USPTO's Director, before a single line of code, produced the product vision and information architecture for a federal open-data mandate that ran for nearly a decade.",
+    "How three months with USPTO's senior leadership, before a single line of code, produced the product vision and information architecture for a federal open-data platform that ran for roughly eight years.",
 };
 
 export default function UsptoOpenDataPage() {
@@ -31,7 +31,7 @@ export default function UsptoOpenDataPage() {
           company="CGI FEDERAL"
           category="PORTAL DESIGN"
           title="USPTO Open Data Initiative"
-          dek="In the summer of 2015 – my first large project after joining CGI – USPTO tasked me with leading the design vision for a federal mandate: make the agency's “treasure trove” of patent and trademark data open, machine-readable, and usable by the public. I spent three months defining the product vision and information architecture with senior USPTO stakeholders ahead of development that September, then kept running weekly JAD sessions and supporting the project through its release the following summer."
+          dek="In June 2015—my first large project at CGI—USPTO brought me in to lead the design vision for a federal mandate: make the agency's &quot;treasure trove&quot; of patent and trademark data open, machine-readable, and usable by the public. I spent three months defining the product vision and information architecture with senior USPTO stakeholders before development began that September, then ran weekly design sessions through release the following summer."
           tags={[
             'Federal Platform',
             'Product Vision',
@@ -42,7 +42,7 @@ export default function UsptoOpenDataPage() {
         <FactStrip
           borderColor="line"
           facts={[
-            { label: 'ROLE', value: 'Product design lead' },
+            { label: 'ROLE', value: 'Solo design lead' },
             {
               label: 'SCOPE',
               value:
@@ -93,9 +93,7 @@ export default function UsptoOpenDataPage() {
               <div className={styles.rail}>
                 <p className={styles.railLabel}>WHERE IT STARTED</p>
                 <p className={styles.railIntro}>
-                  USPTO had a mandate from the White House: all patent and
-                  trademark data must be made available to the public by
-                  August of 2016.
+                  A White House mandate: all patent and trademark data public by August 2016
                 </p>
               </div>
               <div className={styles.body}>
