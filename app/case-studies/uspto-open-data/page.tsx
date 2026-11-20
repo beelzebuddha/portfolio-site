@@ -257,10 +257,7 @@ export default function UsptoOpenDataPage() {
           </div>
         </section>
 
-        <EndCTA
-          nextTitle="AXA Vantage Agent Portal"
-          nextHref="/case-studies/axa-vantage"
-        />
+        <EndCTA current="/case-studies/uspto-open-data" />
       </main>
       <SiteFooter />
     </>

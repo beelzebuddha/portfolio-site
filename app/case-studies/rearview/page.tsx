@@ -216,10 +216,7 @@ export default function RearviewPage() {
           </div>
         </section>
 
-        <EndCTA
-          nextTitle="AXA Vantage"
-          nextHref="/case-studies/axa-vantage"
-        />
+        <EndCTA current="/case-studies/rearview" />
       </main>
       <SiteFooter />
     </>

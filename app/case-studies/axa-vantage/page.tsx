@@ -232,10 +232,7 @@ export default function AxaVantagePage() {
           </div>
         </section>
 
-        <EndCTA
-          nextTitle="Rearview Engineering Platform"
-          nextHref="/case-studies/rearview"
-        />
+        <EndCTA current="/case-studies/axa-vantage" />
       </main>
       <SiteFooter />
     </>

@@ -195,10 +195,7 @@ export default function DragonUiBuilderPage() {
           </div>
         </section>
 
-        <EndCTA
-          nextTitle="USPTO Open Data Initiative"
-          nextHref="/case-studies/uspto-open-data"
-        />
+        <EndCTA current="/case-studies/dragon-ui-builder" />
       </main>
       <SiteFooter />
     </>

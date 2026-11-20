@@ -555,10 +555,7 @@ export default function DevInsightsPage() {
         </section>
 
         {/* 12 · End CTA */}
-        <EndCTA
-          nextTitle="Chassis CodeGen"
-          nextHref="/case-studies/chassis-codegen"
-        />
+        <EndCTA current="/case-studies/dev-insights" />
       </main>
       <SiteFooter />
     </>

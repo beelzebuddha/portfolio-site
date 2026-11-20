@@ -225,10 +225,7 @@ export default function ChassisCodeGenPage() {
           </div>
         </section>
 
-        <EndCTA
-          nextTitle="DragOn UI Builder"
-          nextHref="/case-studies/dragon-ui-builder"
-        />
+        <EndCTA current="/case-studies/chassis-codegen" />
       </main>
       <SiteFooter />
     </>
