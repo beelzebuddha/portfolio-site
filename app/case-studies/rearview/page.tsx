@@ -165,10 +165,9 @@ export default function RearviewPage() {
                   <p className={styles.bodyText}>
                     From the application dashboard, an engineer could see every
                     monitor&apos;s alert state at once, then open a single
-                    monitor to diagnose it — scrubbing back to any incident in
-                    the recent past, zooming for more or less detail, testing
-                    metrics and expressions against real data before committing
-                    a change.
+                    monitor to diagnose it — looking back minutes from now, or
+                    jumping to previous errors, and testing metrics and
+                    expressions against real data before committing a change.
                   </p>
                   <p className={styles.bodyText}>
                     That last part was a deliberate concession to a user I could
@@ -217,7 +216,10 @@ export default function RearviewPage() {
           </div>
         </section>
 
-        <EndCTA label="LEARN" nextTitle="About me" nextHref="/about" />
+        <EndCTA
+          nextTitle="AXA Vantage"
+          nextHref="/case-studies/axa-vantage"
+        />
       </main>
       <SiteFooter />
     </>
