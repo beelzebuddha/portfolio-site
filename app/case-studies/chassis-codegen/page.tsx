@@ -8,6 +8,9 @@ import BodyPull from '../../components/case-study/BodyPull';
 import EndCTA from '../../components/case-study/EndCTA';
 import Figure from '../../components/case-study/Figure';
 import FigureRow from '../../components/case-study/FigureRow';
+import WorkflowDiagram from './components/WorkflowDiagram';
+// Only for the TOKEN GAPS custom properties on .page, which the diagram reads.
+import tokens from '../dev-insights/page.module.css';
 import styles from './page.module.css';
 
 const SCREENSHOT_CHASSIS = '/images/chassis-codegen/screenshot-chassis.png';
@@ -26,7 +29,7 @@ export default function ChassisCodeGenPage() {
   return (
     <>
       <SiteHeader />
-      <main>
+      <main className={tokens.page}>
         <CaseStudyHero
           breadcrumb="Platform Design"
           company="FANNIE MAE"
@@ -126,6 +129,7 @@ export default function ChassisCodeGenPage() {
                 drops into the project ready to run.
               </p>
             </div>
+            <WorkflowDiagram />
             <Figure
               src={SCREENSHOT_CART}
               alt="Screenshot of the Chassis CodeGen cart review screen"
