@@ -22,6 +22,7 @@
 }
 
 .facts {
+  margin: 0;
   display: flex;
   align-items: stretch;
   gap: 1px;
@@ -49,6 +50,7 @@
 }
 
 .value {
+  margin: 0;
   font-family: var(--font-body), sans-serif;
   font-weight: 600;
   font-size: 17px;

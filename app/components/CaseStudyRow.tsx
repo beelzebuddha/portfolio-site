@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import type { ReactNode } from 'react';
 import TagChip from './TagChip';
+import type { CaseStudyTags } from '../lib/tags';
 import styles from './CaseStudyRow.module.css';
 
 export default function CaseStudyRow({
@@ -11,14 +13,18 @@ export default function CaseStudyRow({
   summary,
   imageSrc,
   imageAlt,
+  preview,
 }: {
   company: string;
   title: string;
   href: string;
-  tags: string[];
+  tags: CaseStudyTags;
   summary: string;
-  imageSrc: string;
+  /** Omit (with no `preview`) to render a neutral placeholder panel. */
+  imageSrc?: string;
   imageAlt: string;
+  /** Live content for the thumbnail slot instead of an image. */
+  preview?: ReactNode;
 }) {
   return (
     <div className={styles.row}>
@@ -39,18 +45,24 @@ export default function CaseStudyRow({
       </div>
       <Link
         href={href}
-        className={styles.preview}
+        className={`${styles.preview} ${preview ? styles.previewLive : ''}`}
         aria-hidden="true"
         tabIndex={-1}
       >
-        <Image
-          src={imageSrc}
-          alt={imageAlt}
-          width={569}
-          height={405}
-          quality={90}
-          className={styles.image}
-        />
+        {preview ? (
+          preview
+        ) : imageSrc ? (
+          <Image
+            src={imageSrc}
+            alt={imageAlt}
+            width={569}
+            height={405}
+            quality={90}
+            className={styles.image}
+          />
+        ) : (
+          <span className={styles.placeholder} />
+        )}
       </Link>
     </div>
   );

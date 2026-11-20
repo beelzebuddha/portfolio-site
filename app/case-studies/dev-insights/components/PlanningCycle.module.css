@@ -1,4 +1,9 @@
+/* Type variables come from the TOKEN GAPS block on .page in
+   ../page.module.css. */
+
 .wrap {
+  margin: 0;
+  list-style: none;
   background: var(--surface);
   border: var(--stroke-hairline) solid var(--line-strong);
   border-radius: var(--radius-control);
@@ -32,30 +37,33 @@
 }
 
 .heading {
+  margin: 0;
   font-family: var(--font-display), sans-serif;
   font-weight: 500;
-  font-size: 28px;
-  line-height: 37px;
-  letter-spacing: -0.42px;
+  font-size: var(--type-pull-size);
+  line-height: var(--type-pull-line);
+  letter-spacing: var(--type-pull-track);
 }
 
 .body {
   font-family: var(--font-body), sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: var(--type-prose-size);
+  line-height: var(--type-prose-line);
 }
 
+/* Accent arrow, theme-aware (the old SVG asset was hardcoded to the
+   dark-theme accent, which is 2.0:1 on the light surface). */
 .arrow {
-  height: 52px;
-  width: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  height: var(--space-9);
+  width: var(--space-4);
+  color: var(--accent);
   flex-shrink: 0;
 }
 
-.arrow img {
-  height: 100%;
-  width: auto;
+@media (max-width: 900px) {
+  .wrap,
+  .step {
+    padding: var(--space-4);
+  }
 }

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import TagChip from '../TagChip';
+import type { CaseStudyTags } from '../../lib/tags';
 import styles from './CaseStudyHero.module.css';
 
 export default function CaseStudyHero({
@@ -17,7 +18,7 @@ export default function CaseStudyHero({
   category: string;
   title: string;
   dek: string;
-  tags: string[];
+  tags: CaseStudyTags;
   border?: boolean;
   padding?: 'default' | 'compact';
 }) {

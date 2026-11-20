@@ -37,7 +37,8 @@
   line-height: 68px;
   letter-spacing: -1.6px;
   color: var(--ink);
-  max-width: 720px;
+  /* 820px keeps the headline to three lines at 1440 (720px gave four). */
+  max-width: 820px;
 }
 
 .intro {
@@ -51,8 +52,11 @@
   max-width: 624px;
 }
 
-.muted {
-  color: var(--muted);
+/* Matches the StatsBand feature link (semibold, accent). */
+.cta {
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--accent);
 }
 
 @media (max-width: 900px) {

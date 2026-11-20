@@ -22,6 +22,7 @@
   font-size: 13px;
   letter-spacing: 1.04px;
   color: var(--ink);
+  white-space: nowrap;
 }
 
 .inner {

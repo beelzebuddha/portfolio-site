@@ -32,7 +32,7 @@ export default function AxaVantagePage() {
           category="PLATFORM DESIGN"
           title="AXA Vantage Agent Portal"
           dek="A professional portal for insurance advisors managing complex client portfolios — turning dense, regulated financial data into workflows an advisor could actually move through with their clients."
-          tags={['Customer Research', 'Platform Design', 'Creative Direction']}
+          tags={['Research & discovery', 'Complex workflows']}
           padding="compact"
         />
 

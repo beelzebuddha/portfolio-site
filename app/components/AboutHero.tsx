@@ -38,9 +38,9 @@ export default function AboutHero() {
               builds them a channel.
             </p>
             <div className={styles.tags}>
-              <TagChip label="Design Leadership" />
-              <TagChip label="Developer Experience" />
-              <TagChip label="Customer Research" />
+              <TagChip label="Design leadership" />
+              <TagChip label="Research & discovery" />
+              <TagChip label="Complex workflows" />
             </div>
           </div>
           <Image

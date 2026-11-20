@@ -1,0 +1,65 @@
+/* Not in the Figma frame (replaces the placeholder bar charts). Card chrome
+   reuses the Metric Comparison / Aside card treatment; type variables come
+   from the TOKEN GAPS block on .page in ../page.module.css. */
+
+.tiles {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5);
+  width: 100%;
+  max-width: var(--measure-wide);
+}
+
+.tile {
+  background: var(--surface);
+  border: var(--stroke-hairline) solid var(--line);
+  border-top: var(--stroke-emphasis) solid var(--accent);
+  border-radius: var(--radius-card);
+  padding: var(--space-5) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.value {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 700;
+  font-size: var(--type-heading-l-size);
+  line-height: var(--type-heading-l-line);
+  letter-spacing: var(--type-heading-l-track);
+  color: var(--ink);
+}
+
+.label {
+  font-family: var(--font-body), sans-serif;
+  font-weight: 600;
+  font-size: var(--type-prose-size);
+  line-height: var(--type-prose-line);
+  color: var(--ink);
+}
+
+.period,
+.driver {
+  font-family: var(--font-body), sans-serif;
+  font-size: var(--type-caption-size);
+  line-height: var(--type-caption-line);
+  color: var(--muted);
+}
+
+.driver {
+  margin-top: var(--space-1);
+}
+
+.driverLabel {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+@media (max-width: 900px) {
+  .tiles {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

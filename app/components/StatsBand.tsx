@@ -5,30 +5,30 @@ import styles from './StatsBand.module.css';
 export default function StatsBand() {
   return (
     <section className={styles.band}>
-      <span className={styles.seamChip}>THE LAST FOUR YEARS</span>
+      <span className={styles.seamChip}>AT FANNIE MAE, 2022–2026</span>
       <div className={`container ${styles.inner}`}>
         <div className={styles.grid}>
           <div className={styles.cell}>
             <StatColumn
               label="REACH"
-              lead="Served 3,000+ developers"
-              continuation="by designing products and resource portals that allowed developers to focus on the work they love doing"
-            />
-          </div>
-          <div className={styles.divider} aria-hidden="true" />
-          <div className={styles.cell}>
-            <StatColumn
-              label="EFFICIENCY"
-              lead="Saved 21,000+ developer-hours quarterly over two years"
-              continuation="by applying customer research principles to product engagement"
+              lead="3,000+ developers"
+              continuation="served by the internal tools and research program I led"
             />
           </div>
           <div className={styles.divider} aria-hidden="true" />
           <div className={styles.cell}>
             <StatColumn
               label="RESEARCH"
-              lead="Led org-wide survey initiative"
-              continuation="which led to 12-25% improvements in deep work and build and test drivers across org"
+              lead="+12% deep work, +12.5% build and test"
+              continuation="after the first org-wide developer survey I led"
+            />
+          </div>
+          <div className={styles.divider} aria-hidden="true" />
+          <div className={styles.cell}>
+            <StatColumn
+              label="EFFICIENCY"
+              lead="21,000+ developer-hours saved per quarter"
+              continuation="as Stack Overflow Enterprise activity grew 125%"
             />
           </div>
         </div>
@@ -38,7 +38,8 @@ export default function StatsBand() {
             href="/case-studies/dev-insights"
             className={`${styles.link} link-underline`}
           >
-            Learn how I founded a developer research community at Fannie Mae →
+            How I founded Dev Insights, Fannie Mae&apos;s developer research
+            program →
           </Link>
         </div>
       </div>

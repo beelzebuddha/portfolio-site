@@ -79,6 +79,20 @@
   display: block;
 }
 
+/* Live (non-image) thumbnails have no intrinsic width, so make them fill
+   the row when it stacks on mobile; image cards are left as they were. */
+.previewLive {
+  align-self: stretch;
+}
+
+/* Same footprint as a 569x405 thumbnail, for cards with no image yet. */
+.placeholder {
+  display: block;
+  width: 100%;
+  aspect-ratio: 569 / 405;
+  background: var(--panel);
+}
+
 @media (max-width: 900px) {
   .row {
     flex-direction: column;

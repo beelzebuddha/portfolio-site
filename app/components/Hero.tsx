@@ -5,20 +5,27 @@ export default function Hero() {
     <section className={styles.hero}>
       <div className={`container ${styles.inner}`}>
         <div className={styles.eyebrow}>
-          <span>PRODUCT DESIGN LEADER</span>
+          <span>PRODUCT DESIGN LEAD</span>
           <span className={styles.line} aria-hidden="true" />
-          <span>ENTERPRISE &amp; INTERNAL PLATFORMS</span>
+          <span>ENTERPRISE AND INTERNAL PLATFORMS</span>
         </div>
         <h1 className={styles.headline}>
-          I lead data-driven design for the captive customer.
+          I design complex enterprise tools around the people who have to use
+          them.
         </h1>
         <div className={styles.intro}>
-          <p className={styles.muted}>
-           The captive customer is the employee - the person who uses enterprise applications all day and never gets a say in how they are designed.
-          </p>
           <p>
-            I've spent my career on complex, data-heavy enterprise applications - internal operational tools, regulated financial systems, federal platforms, and most recently the tools engineers build with.
+            I&apos;ve spent my career on data-heavy enterprise applications:
+            developer platforms, financial systems, and federal portals. I start
+            with research, decide what matters most on each screen, and can show
+            you why every design looks the way it does.
           </p>
+          {/* Same-page anchor: eased by html { scroll-behavior: smooth } in
+              globals.css, which is switched off under prefers-reduced-motion.
+              #case-studies already offsets the sticky header. */}
+          <a href="#case-studies" className={`${styles.cta} link-underline`}>
+            See the case studies ↓
+          </a>
         </div>
       </div>
     </section>
