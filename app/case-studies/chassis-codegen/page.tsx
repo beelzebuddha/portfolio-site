@@ -8,6 +8,9 @@ import BodyPull from '../../components/case-study/BodyPull';
 import EndCTA from '../../components/case-study/EndCTA';
 import Figure from '../../components/case-study/Figure';
 import FigureRow from '../../components/case-study/FigureRow';
+import WorkflowDiagram from './components/WorkflowDiagram';
+// Only for the TOKEN GAPS custom properties on .page, which the diagram reads.
+import tokens from '../dev-insights/page.module.css';
 import styles from './page.module.css';
 
 const SCREENSHOT_CHASSIS = '/images/chassis-codegen/screenshot-chassis.png';
@@ -26,7 +29,7 @@ export default function ChassisCodeGenPage() {
   return (
     <>
       <SiteHeader />
-      <main>
+      <main className={tokens.page}>
         <CaseStudyHero
           breadcrumb="Platform Design"
           company="FANNIE MAE"
@@ -50,7 +53,7 @@ export default function ChassisCodeGenPage() {
             },
             {
               label: 'ALSO LED',
-              value: 'Stack Overflow Enterprise engagement, Chassis Confluence space',
+              value: 'Chassis Confluence space',
             },
           ]}
         />
@@ -74,15 +77,14 @@ export default function ChassisCodeGenPage() {
           <div className={`container ${styles.inner}`}>
             <div className={styles.prose}>
               <div className={styles.rail}>
-                <p className={styles.railLabel}>WHERE IT STARTED</p>
+                <p className={styles.railLabel}>THE PROBLEM</p>
                 <p className={styles.railIntro}>
                   Nobody picked Chassis's microservices, but everyone had to use them.
                 </p>
               </div>
               <div className={styles.body}>
                 <p className={styles.lede}>
-                  To use one Chassis component, a developer had to download all
-                  55 of them. Before Chassis CodeGen, the Chassis enterprise 
+                  Before Chassis CodeGen, the Chassis enterprise 
                   microservice library was one package — every service, every 
                   dependency, whether the project needed it or not. Documentation 
                   for each service lived in different locations. Each service team
@@ -114,7 +116,7 @@ export default function ChassisCodeGenPage() {
             </p>
             <div className={`${styles.body} measure-prose`}>
               <p className={styles.mutedText}>
-                Scroll or search 55 components, add what the service needs to a
+                Browse 55 components, add what the service needs to a
                 cart, and leave by one of two doors: download the selection as a
                 single zip, or open each component and configure it first. The
                 last screen lists what&apos;s in the package before the code is 
@@ -126,6 +128,7 @@ export default function ChassisCodeGenPage() {
                 drops into the project ready to run.
               </p>
             </div>
+            <WorkflowDiagram />
             <Figure
               src={SCREENSHOT_CART}
               alt="Screenshot of the Chassis CodeGen cart review screen"
@@ -170,7 +173,7 @@ export default function ChassisCodeGenPage() {
                 <>
                   <p className={styles.mutedText}>
                     I designed the application experience from end to end —
-                    catalog browse and search, selection, the cart, the
+                    catalog browsing, selection, the cart, the
                     download. That was one problem and it was solvable.
                   </p>
                   <p className={styles.mutedText}>
@@ -202,8 +205,11 @@ export default function ChassisCodeGenPage() {
               <p className={styles.mutedText}>
                 Documentation was the part I could not design my way out of. Before Chassis CodeGen, documentation was in a spread of locations across
                 Confluence. Each microservice belonged to the service teams and it lived wherever they put
-                it. For the MVP (and, shocker, there wasn't anything released past it beyond maintenance and microservice version updates), 
-                documentation for each service was consolidated into a central location in Confluence. Every component card had links to its documentation in the central location.
+                it. For the MVP, documentation for each service was
+                consolidated into a central location in Confluence. Every
+                component card had links to its documentation in the central
+                location. The MVP was the final major release; later work was
+                maintenance and microservice version updates.
               </p>
               <p className={styles.mutedText}>
                 To use the components they need, a developer now downloads only
@@ -219,10 +225,7 @@ export default function ChassisCodeGenPage() {
           </div>
         </section>
 
-        <EndCTA
-          nextTitle="DragOn UI Builder"
-          nextHref="/case-studies/dragon-ui-builder"
-        />
+        <EndCTA current="/case-studies/chassis-codegen" />
       </main>
       <SiteFooter />
     </>

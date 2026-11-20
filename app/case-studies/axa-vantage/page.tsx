@@ -92,7 +92,7 @@ export default function AxaVantagePage() {
           <div className={`container ${styles.inner}`}>
             <div className={styles.prose}>
               <div className={styles.rail}>
-                <p className={styles.railLabel}>WHERE IT STARTED</p>
+                <p className={styles.railLabel}>THE PROBLEM</p>
                 <p className={styles.railIntro}>
                   Agents would drag brief cases (some had suit cases) full of
                   pamphlets and guides.
@@ -232,10 +232,7 @@ export default function AxaVantagePage() {
           </div>
         </section>
 
-        <EndCTA
-          nextTitle="Rearview Engineering Platform"
-          nextHref="/case-studies/rearview"
-        />
+        <EndCTA current="/case-studies/axa-vantage" />
       </main>
       <SiteFooter />
     </>
