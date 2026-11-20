@@ -102,3 +102,13 @@
     width: 100%;
   }
 }
+
+/* Inline links in running text: persistent underline + accent so they're
+   identifiable without hover (WCAG 1.4.1). Same treatment as the Dev
+   Insights page's links. Focus ring comes from the global a:focus-visible. */
+.textLink {
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: var(--space-0);
+}

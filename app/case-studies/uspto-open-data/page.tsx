@@ -18,7 +18,7 @@ const MICHELLE_LEE_LETTER = '/images/uspto-open-data/michelle-lee-letter.jpg';
 export const metadata: Metadata = {
   title: 'USPTO Open Data Initiative — Kevin B. Doyle',
   description:
-    "How three months with USPTO's senior leadership, before a single line of code, produced the product vision and information architecture for a federal open-data platform that ran for roughly eight years.",
+    "How two months with USPTO's senior leadership, before a single line of code, produced the product vision and information architecture for a federal open-data platform that ran for roughly eight years.",
 };
 
 export default function UsptoOpenDataPage() {
@@ -31,7 +31,7 @@ export default function UsptoOpenDataPage() {
           company="CGI FEDERAL"
           category="PORTAL DESIGN"
           title="USPTO Open Data Initiative"
-          dek="In June 2015—my first large project at CGI—USPTO brought me in to lead the design vision for a federal mandate: make the agency's &quot;treasure trove&quot; of patent and trademark data open, machine-readable, and usable by the public. I spent three months defining the product vision and information architecture with senior USPTO stakeholders before development began that September, then ran weekly design sessions through release the following summer."
+          dek="In June 2015—my first large project at CGI—USPTO brought me in to lead the design vision for a federal mandate: make the agency's &quot;treasure trove&quot; of patent and trademark data open, machine-readable, and usable by the public. I spent two months defining the product vision and information architecture with senior USPTO stakeholders before development began that September, then ran weekly design sessions through release the following summer."
           tags={[
             'Information architecture',
             'Search & filtering',
@@ -57,19 +57,19 @@ export default function UsptoOpenDataPage() {
                     href="https://en.wikipedia.org/wiki/Michelle_K._Lee"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="link-underline"
+                    className={styles.textLink}
                   >
-                    Michelle K. Lee&apos;s
-                  </a>{' '}
-                  <span className="sr-only">(opens in a new tab)</span>
-                  office
+                    Michelle K. Lee
+                    <span className="sr-only"> (opens in a new tab)</span>
+                  </a>
+                  &apos;s office
                 </>
               ),
             },
             {
               label: 'OUTCOME',
               value:
-                "Shipped ahead of schedule; ran ~8 years before evolving into USPTO's current platform",
+                "Launched two months early; ran ~8 years before evolving into USPTO's current platform",
             },
           ]}
         />
@@ -93,7 +93,7 @@ export default function UsptoOpenDataPage() {
               <div className={styles.rail}>
                 <p className={styles.railLabel}>THE PROBLEM</p>
                 <p className={styles.railIntro}>
-                  A White House mandate: all patent and trademark data public by August 2016
+                  A White House mandate with a hard deadline
                 </p>
               </div>
               <div className={styles.body}>
@@ -108,13 +108,13 @@ export default function UsptoOpenDataPage() {
                   held.
                 </p>
                 <p className={styles.bodyText}>
-                  I was brought in in June 2015 – before scope, before a dev
+                  I joined in June 2015 – before scope, before a dev
                   team, before even a firm sense of what &quot;done&quot;
                   looked like. My job was to build that picture with the
                   people who&apos;d be accountable for it.
                 </p>
                 <p className={styles.bodyText}>
-                  For three months, I worked daily with USPTO&apos;s senior
+                  For two months, I worked daily with USPTO&apos;s senior
                   stakeholders, out of a war room where our team reported
                   directly to then-USPTO Director Michelle Lee, to define the
                   product vision and information architecture ahead of
@@ -157,7 +157,7 @@ export default function UsptoOpenDataPage() {
               captionTitle="Home page concept from the Product Vision."
             >
               <p className={styles.bodyText}>
-                During the first three months of the project, I was able to sit
+                During the first two months of the project, I was able to sit
                 with stakeholders to get a sense of what they needed. The
                 Product Vision was fully established before development –
                 this allowed us to easily communicate the site concept to
@@ -178,7 +178,7 @@ export default function UsptoOpenDataPage() {
               <p className={styles.bodyText}>
                 Once development started, the stakeholders and I met weekly
                 to discuss concepts and direction so we could quickly move to
-                design. This allowed us to refine the design several Sprints
+                design. This allowed us to refine the design several sprints
                 ahead of development
               </p>
             </FigureWithCaption>
@@ -192,7 +192,7 @@ export default function UsptoOpenDataPage() {
               captionTitle="Open Data Portal site map."
             >
               <p className={styles.bodyText}>
-                The site map was our &quot;secret sauce&quot; for PI planning.
+                The site map was our &quot;secret sauce&quot; for Program Increment (PI) planning.
                 We used it as the framework for planning each PI and breaking
                 down the Product Backlog for the dev team.
               </p>
@@ -207,9 +207,9 @@ export default function UsptoOpenDataPage() {
               captionTitle="Final visual design for the home page."
             >
               <p className={styles.bodyText}>
-                Design was able to stay several Sprints ahead of development
+                Design was able to stay several sprints ahead of development
                 for the entire project, allowing us to deliver and release
-                the Open Data Portal two months ahead of time.
+                the Open Data Portal two months early.
               </p>
             </FigureWithCaption>
           </div>
@@ -224,8 +224,17 @@ export default function UsptoOpenDataPage() {
               <p className={styles.bodyText}>
                 Nearly a decade after the platform I helped envision first
                 shipped, its structure is still recognizable in the system
-                USPTO runs today – absorbed, by the agency&apos;s own
-                description, into the Open Data Portal that eventually
+                USPTO runs today – absorbed, by{' '}
+                <a
+                  href="https://developer.uspto.gov/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.textLink}
+                >
+                  the agency&apos;s own description
+                  <span className="sr-only"> (opens in a new tab)</span>
+                </a>
+                , into the Open Data Portal that eventually
                 replaced it. That kind of staying power isn&apos;t an
                 accident on a federal timeline; it&apos;s what happens when a
                 vision gets built with the people who have to live with it,
