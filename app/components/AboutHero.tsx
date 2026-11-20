@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import TagChip from './TagChip';
 import styles from './AboutHero.module.css';
 
 export default function AboutHero() {
@@ -18,30 +17,21 @@ export default function AboutHero() {
           <span className={styles.breadcrumbInk}>About</span>
         </div>
         <div className={styles.eyebrow}>
-          <span>PRODUCT DESIGN LEADERSHIP</span>
+          <span>About</span>
           <span className={styles.line} aria-hidden="true" />
         </div>
-        <h1 className={styles.title}>Hi! I&rsquo;m Kevin.</h1>
         <div className={styles.row}>
           <div className={styles.left}>
-            <p className={styles.headline}>
-              Designing experiences that truly improve people&rsquo;s lives is
-              my professional passion.
-            </p>
+            <h1 className={styles.title}>Hi! I&rsquo;m Kevin.</h1>
             <p className={styles.standfirst}>
-              I&rsquo;ve spent 25+ years on complex, data-heavy enterprise
-              applications — internal operational tools, regulated financial
-              systems, federal platforms, and now the tools engineers build
-              with. Different industries, one constant: the people on the other
-              end can&rsquo;t leave, can&rsquo;t switch to a competitor, and
-              have no way to tell you anything unless someone deliberately
-              builds them a channel.
+              I design complex enterprise tools around the people who have to
+              use them: internal operational tools, regulated financial
+              systems, federal platforms, and most recently the tools
+              developers build with. Different industries, one constant: the
+              people on the other end can&rsquo;t switch to a competitor, and
+              can&rsquo;t tell you what&rsquo;s broken unless someone builds
+              them a channel.
             </p>
-            <div className={styles.tags}>
-              <TagChip label="Design leadership" />
-              <TagChip label="Research & discovery" />
-              <TagChip label="Complex workflows" />
-            </div>
           </div>
           <Image
             src="/images/about/portrait.png"

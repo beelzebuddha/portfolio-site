@@ -75,28 +75,12 @@
   gap: var(--space-5);
 }
 
-.headline {
-  font-family: var(--font-display), sans-serif;
-  font-weight: 700;
-  font-size: 34px;
-  line-height: 39px;
-  letter-spacing: -0.68px;
-  color: var(--ink);
-}
-
 .standfirst {
   font-family: var(--font-body), sans-serif;
   font-size: 21px;
   line-height: 33px;
   color: var(--muted);
   max-width: 660px;
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-1);
-  width: 100%;
 }
 
 .photo {
@@ -113,10 +97,22 @@
     font-size: 40px;
     line-height: 46px;
   }
+  /* Phones/tablet: title, then photo, then intro (the title sits inside
+     .left on desktop so the photo can top-align with it). */
   .row {
-    flex-direction: column-reverse;
+    flex-direction: column;
+  }
+  .left {
+    display: contents;
+  }
+  .title {
+    order: 0;
   }
   .photo {
+    order: 1;
     width: 100%;
+  }
+  .standfirst {
+    order: 2;
   }
 }

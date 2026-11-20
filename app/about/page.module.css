@@ -19,11 +19,30 @@
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--space-5);
+  gap: var(--space-9);
   font-family: var(--font-body), sans-serif;
   font-size: 18px;
   line-height: 30px;
   color: var(--ink);
+}
+
+/* One body section: SectionHeader h2 + its paragraphs. scroll-margin-top
+   keeps #ai clear of the sticky header, with breathing room, when linked from the home page. */
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  scroll-margin-top: calc(var(--header-height) + var(--space-7));
+}
+
+/* Inline links in running text: accent + persistent underline so they're
+   identifiable without hover (WCAG 1.4.1). Same treatment as the USPTO and
+   Dev Insights pages' text links. Focus ring: global a:focus-visible. */
+.textLink {
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: var(--space-0);
 }
 
 .aside {
