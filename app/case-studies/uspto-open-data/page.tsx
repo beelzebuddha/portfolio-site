@@ -91,7 +91,7 @@ export default function UsptoOpenDataPage() {
           <div className={`container ${styles.inner}`}>
             <div className={styles.prose}>
               <div className={styles.rail}>
-                <p className={styles.railLabel}>WHERE IT STARTED</p>
+                <p className={styles.railLabel}>THE PROBLEM</p>
                 <p className={styles.railIntro}>
                   A White House mandate: all patent and trademark data public by August 2016
                 </p>

@@ -73,7 +73,7 @@ export default function DragonUiBuilderPage() {
           <div className={`container ${styles.inner}`}>
             <div className={styles.prose}>
               <div className={styles.rail}>
-                <p className={styles.railLabel}>WHERE IT STARTED</p>
+                <p className={styles.railLabel}>THE PROBLEM</p>
                 <p className={styles.railIntro}>
                   Most teams had no designer and no way into the design system.
                 </p>

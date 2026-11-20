@@ -78,7 +78,7 @@ export default function RearviewPage() {
           <div className={`container ${styles.inner}`}>
             <div className={styles.prose}>
               <div className={styles.rail}>
-                <p className={styles.railLabel}>WHERE IT STARTED</p>
+                <p className={styles.railLabel}>THE PROBLEM</p>
                 <p className={styles.railIntro}>
                   Nobody browses a monitoring tool. They open it at 2am.
                 </p>

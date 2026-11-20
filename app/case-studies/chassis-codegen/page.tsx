@@ -77,7 +77,7 @@ export default function ChassisCodeGenPage() {
           <div className={`container ${styles.inner}`}>
             <div className={styles.prose}>
               <div className={styles.rail}>
-                <p className={styles.railLabel}>WHERE IT STARTED</p>
+                <p className={styles.railLabel}>THE PROBLEM</p>
                 <p className={styles.railIntro}>
                   Nobody picked Chassis's microservices, but everyone had to use them.
                 </p>
