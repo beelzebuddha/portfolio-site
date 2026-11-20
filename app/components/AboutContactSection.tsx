@@ -28,6 +28,9 @@ export default function AboutContactSection() {
               <a href="/about" className={`${styles.link} link-underline`}>
                 More about me →
               </a>
+              <a href="/about#ai" className={`${styles.link} link-underline`}>
+                How I work with AI →
+              </a>
             </div>
           </div>
         </div>

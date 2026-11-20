@@ -4,7 +4,6 @@ import Hero from './components/Hero';
 import StatsBand from './components/StatsBand';
 import CaseStudiesSection from './components/CaseStudiesSection';
 import ResourcesSection from './components/ResourcesSection';
-import AiPracticeSection from './components/AiPracticeSection';
 import AboutContactSection from './components/AboutContactSection';
 import SiteFooter from './components/SiteFooter';
 
@@ -18,7 +17,6 @@ export default function HomePage() {
         <StatsBand />
         <CaseStudiesSection />
         <ResourcesSection />
-        <AiPracticeSection />
         <AboutContactSection />
       </main>
       <SiteFooter />
