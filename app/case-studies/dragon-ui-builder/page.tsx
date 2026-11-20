@@ -31,7 +31,7 @@ export default function DragonUiBuilderPage() {
           category="PLATFORM DESIGN"
           title="DragOn UI Builder"
           dek="DragOn solved three problems at once: slow onboarding for new and junior developers, no shared way to work through a UI concept, and product teams with no designer. New developers learned our Angular system by dragging its real components into place. Developers and product managers built and shared working concepts without writing code. Some teams started building UI together right after stand-up."
-          tags={['Platform Design', 'Developer Experience', 'Visual Design']}
+          tags={['Design systems', 'Complex workflows']}
         />
 
         <FactStrip

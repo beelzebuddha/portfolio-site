@@ -33,7 +33,7 @@ export default function ChassisCodeGenPage() {
           category="PLATFORM DESIGN"
           title="Chassis CodeGen"
           dek="To use one Chassis component, a developer had to download all 55. I redesigned the catalog into a browse, configure, and download experience, so teams get only what they need, ready to run. The customization forms were a second problem: new components arrived on engineering's schedule, not mine. So I wrote the form guidance developers built from, and moved from drafting every screen to approving them at sprint review."
-          tags={['Platform Design', 'Developer Experience', 'Visual Design']}
+          tags={['Complex workflows', 'Design systems']}
         />
 
         <FactStrip

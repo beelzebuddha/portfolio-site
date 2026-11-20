@@ -32,11 +32,7 @@ export default function RearviewPage() {
           category="PLATFORM DESIGN"
           title="Rearview Engineering Platform"
           dek="When a deal was live, an outage didn't defer revenue — it stopped it in its tracks. I designed the monitoring tool engineers used to see system health at a glance and act before small failures cascaded — built in direct partnership with the engineers who'd live in it."
-          tags={[
-            'Platform Design',
-            'Developer Experience',
-            'Interaction Design',
-          ]}
+          tags={['Dashboards & data', 'Research & discovery']}
           padding="compact"
         />
 

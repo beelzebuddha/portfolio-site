@@ -33,9 +33,9 @@ export default function UsptoOpenDataPage() {
           title="USPTO Open Data Initiative"
           dek="In June 2015—my first large project at CGI—USPTO brought me in to lead the design vision for a federal mandate: make the agency's &quot;treasure trove&quot; of patent and trademark data open, machine-readable, and usable by the public. I spent three months defining the product vision and information architecture with senior USPTO stakeholders before development began that September, then ran weekly design sessions through release the following summer."
           tags={[
-            'Federal Platform',
-            'Product Vision',
-            'Information Architecture',
+            'Information architecture',
+            'Search & filtering',
+            'Design leadership',
           ]}
         />
 
