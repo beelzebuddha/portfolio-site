@@ -1,158 +1,253 @@
+/* Every box and swatch border uses --line-control: 3.39:1 (light) /
+   5.35:1 (dark) against --panel, clearing WCAG 1.4.11.
+
+   All sizes go through the local --oc-* variables below, so the same markup
+   renders in two variants:
+   - full (Dev Insights page): values come from the TOKEN GAPS block on .page
+     in ../page.module.css.
+   - thumbnail (home page card): values are container-query units, so the
+     whole diagram scales with the thumbnail's width like an image would. */
+
 .card {
+  --oc-pad: var(--space-4);
+  --oc-gap: var(--space-5);
+  --oc-diagram: var(--diagram-size);
+  --oc-inset: var(--space-4);
+  --oc-label-inset: var(--space-2);
+  --oc-num-inset: var(--space-1);
+  --oc-num-size: var(--type-heading-m-size);
+  --oc-num-track: var(--type-heading-m-track);
+  --oc-legend-title-size: var(--type-section-label-size);
+  --oc-legend-title-track: var(--type-section-label-track);
+  --oc-legend-gap: var(--space-4);
+  --oc-row-gap: var(--space-5);
+  --oc-swatch: var(--swatch-size);
+  --oc-title-size: var(--type-heading-m-size);
+  --oc-body-size: var(--type-body-s-size);
+  --oc-body-line: var(--type-body-s-line);
+  --oc-text-gap: var(--space-0);
+
+  margin: 0;
   background: var(--panel);
   border: var(--stroke-hairline) solid var(--line);
   border-radius: var(--radius-control);
-  padding: var(--space-4);
+  padding: var(--oc-pad);
   display: flex;
-  gap: var(--space-5);
-  align-items: flex-start;
+  flex-direction: column;
+  gap: var(--space-4);
   width: 100%;
 }
 
-.diagram {
-  flex-shrink: 0;
+.body {
+  display: flex;
+  gap: var(--oc-gap);
+  align-items: center;
+  width: 100%;
 }
 
-.superdivision {
+/* --- Diagram (division = 3,000) ----------------------------------------- */
+
+.diagram {
   position: relative;
+  flex-shrink: 0;
+  width: var(--oc-diagram);
+  aspect-ratio: 1;
   background: var(--bg);
   border: var(--stroke-hairline) solid var(--line-control);
-  border-radius: 2px;
-  width: 400px;
-  height: 400px;
-  padding: var(--space-4);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  border-radius: var(--radius-chip);
 }
 
-.superdivisionLabel {
-  margin: 0;
+.divisionLabel {
+  position: absolute;
+  top: var(--oc-label-inset);
+  left: var(--oc-label-inset);
+  right: var(--oc-label-inset);
   font-family: var(--font-display), sans-serif;
   font-weight: 500;
-  font-size: 22px;
-  letter-spacing: -0.22px;
+  font-size: var(--oc-num-size);
+  letter-spacing: var(--oc-num-track);
   color: var(--muted);
 }
 
-.newTeam {
-  position: relative;
+/* 450 / 3,000 = 15% of the area -> sqrt(0.15) = 38.73% of the side */
+.panelBox {
+  position: absolute;
+  left: var(--oc-inset);
+  bottom: var(--oc-inset);
+  width: 38.73%;
+  aspect-ratio: 1;
   background: var(--surface);
   border: var(--stroke-hairline) solid var(--line-control);
-  /* 166 / 400 from the source proportions */
-  width: 41.5%;
-  height: 41.5%;
-  display: flex;
-  align-items: flex-end;
-  gap: var(--space-1);
 }
 
-.diTeam {
+.panelLabel {
+  position: absolute;
+  top: var(--oc-num-inset);
+  left: var(--oc-num-inset);
+  font-family: var(--font-display), sans-serif;
+  font-weight: 500;
+  font-size: var(--oc-num-size);
+  letter-spacing: var(--oc-num-track);
+  color: var(--accent);
+}
+
+/* 45 / 450 = 10% of the area -> sqrt(0.10) = 31.62% of the 450 box's side */
+.championsBox {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 31.62%;
+  aspect-ratio: 1;
   background: var(--accent);
   color: var(--accent-ink);
-  /* 44 / 166 from the source proportions */
-  width: 26.506%;
-  height: 26.506%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-display), sans-serif;
   font-weight: 500;
-  font-size: 22px;
-  letter-spacing: -0.22px;
+  font-size: var(--oc-num-size);
+  letter-spacing: var(--oc-num-track);
 }
 
-.newTeamLabel {
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  font-family: var(--font-display), sans-serif;
-  font-weight: 500;
-  font-size: 22px;
-  letter-spacing: -0.22px;
-  color: var(--accent);
-}
+/* --- Legend ------------------------------------------------------------- */
 
 .legend {
   flex: 1;
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
-  justify-content: center;
+  gap: var(--oc-legend-gap);
 }
 
-.heading {
+/* Label size (matches the "THE PROBLEM" section label), never larger than
+   the section h2. */
+.legendTitle {
   font-family: var(--font-display), sans-serif;
   font-weight: 700;
-  font-size: 40px;
-  line-height: 46px;
-  letter-spacing: -0.8px;
+  font-size: var(--oc-legend-title-size);
+  letter-spacing: var(--oc-legend-title-track);
+  text-transform: uppercase;
   color: var(--accent);
+}
+
+.legendList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--oc-legend-gap);
 }
 
 .row {
   display: flex;
-  gap: var(--space-6);
+  gap: var(--oc-row-gap);
   align-items: flex-start;
 }
 
 .swatch {
-  width: 44px;
-  height: 44px;
+  width: var(--oc-swatch);
+  height: var(--oc-swatch);
   flex-shrink: 0;
+  border: var(--stroke-hairline) solid var(--line-control);
 }
 
-.swatch.accent {
+.swatch.champions {
   background: var(--accent);
-  border: var(--stroke-hairline) solid var(--accent);
+  border-color: var(--accent);
 }
 
+/* Fills match the boxes they stand for in the diagram */
 .swatch.panel {
-  background: var(--panel);
-  border: var(--stroke-hairline) solid var(--line-control);
+  background: var(--surface);
 }
 
-.swatch.bg {
+.swatch.division {
   background: var(--bg);
-  border: var(--stroke-hairline) solid var(--line-control);
 }
 
 .rowText {
   display: flex;
   flex-direction: column;
-  gap: var(--space-0);
-  width: 100%;
-  max-width: 360px;
+  gap: var(--oc-text-gap);
   min-width: 0;
 }
 
 .rowTitle {
   font-family: var(--font-display), sans-serif;
   font-weight: 500;
-  font-size: 22px;
-  letter-spacing: -0.22px;
+  font-size: var(--oc-title-size);
+  letter-spacing: var(--oc-num-track);
   color: var(--accent);
 }
 
 .rowBody {
   font-family: var(--font-body), sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 26px;
+  font-size: var(--oc-body-size);
+  line-height: var(--oc-body-line);
   color: var(--ink);
 }
 
+.caption {
+  font-family: var(--font-body), sans-serif;
+  font-size: var(--type-caption-size);
+  line-height: var(--type-caption-line);
+  color: var(--muted);
+}
+
+/* Stack on mobile, diagram after the legend text (full variant only). */
 @media (max-width: 900px) {
-  .card {
-    flex-direction: column;
+  .card:not(.thumb) .body {
+    flex-direction: column-reverse;
+    align-items: stretch;
   }
-  .diagram {
+  .card:not(.thumb) .diagram {
     width: 100%;
+    max-width: var(--oc-diagram);
   }
-  .superdivision {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1;
+}
+
+/* --- Thumbnail variant ---------------------------------------------------
+   Laid out on a 569 x 405 reference frame (the home card thumbnail size).
+   1cqw = 1% of the frame's width, so every value below is the reference px
+   value / 5.69. The layout never reflows -- it only scales. */
+
+.thumbFrame {
+  container-type: inline-size;
+  width: 100%;
+  aspect-ratio: 569 / 405;
+  background: var(--panel);
+}
+
+.card.thumb {
+  --oc-pad: 4.2cqw; /* 24px */
+  --oc-gap: 3.5cqw; /* 20px */
+  --oc-diagram: 52.7cqw; /* 300px */
+  --oc-inset: 2.1cqw; /* 12px */
+  --oc-label-inset: 1.6cqw; /* 9px */
+  --oc-num-inset: 1cqw; /* 6px */
+  --oc-num-size: 2.6cqw; /* 15px */
+  --oc-num-track: -0.03cqw;
+  --oc-legend-title-size: 1.6cqw; /* 9px */
+  --oc-legend-title-track: 0.22cqw;
+  --oc-legend-gap: 2.5cqw; /* 14px */
+  --oc-row-gap: 1.8cqw; /* 10px */
+  --oc-swatch: 4.2cqw; /* 24px */
+  --oc-title-size: 2.3cqw; /* 13px */
+  --oc-body-size: 1.8cqw; /* 10px */
+  --oc-body-line: 1.35;
+  --oc-text-gap: 0.4cqw;
+
+  height: 100%;
+  border: none;
+  border-radius: 0;
+  justify-content: center;
+}
+
+/* Narrow thumbnails (phone widths): legend titles only -- the descriptive
+   lines fall below a readable size. Desktop and tablet thumbnails keep them. */
+@container (max-width: 480px) {
+  .thumb .rowBody {
+    display: none;
   }
 }

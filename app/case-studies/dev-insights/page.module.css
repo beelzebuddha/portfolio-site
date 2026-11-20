@@ -1,12 +1,50 @@
+/* =========================================================================
+   TOKEN GAPS -- pending review, do not extend.
+   The Figma file defines these as text styles / fixed sizes, but globals.css
+   has no matching custom properties. They are declared once here (scoped to
+   this page's <main>) instead of being scattered as literals, so they can be
+   swapped for real tokens in one place. Names follow the Figma style names.
+   ========================================================================= */
+.page {
+  /* Figma text styles with no CSS token */
+  --type-heading-xl-size: 40px; /* heading/xl */
+  --type-heading-xl-line: 46px;
+  --type-heading-xl-track: -0.8px;
+  --type-heading-l-size: 34px; /* heading/l */
+  --type-heading-l-line: 39px;
+  --type-heading-l-track: -0.68px;
+  --type-heading-m-size: 22px; /* heading/m */
+  --type-heading-m-track: -0.22px;
+  --type-pull-size: 28px; /* pull */
+  --type-pull-line: 37px;
+  --type-pull-track: -0.42px;
+  --type-section-label-size: 15px; /* section-label */
+  --type-section-label-track: 2.1px;
+  --type-lede-size: 21px; /* lede */
+  --type-lede-line: 33px;
+  --type-prose-size: 18px; /* body/prose, link/feature */
+  --type-prose-line: 30px;
+  --type-body-s-size: 16px; /* body/s */
+  --type-body-s-line: 26px;
+  --type-caption-size: 14px; /* caption */
+  --type-caption-line: 21px;
+
+  /* Layout widths with no CSS token */
+  --measure-wide: 760px; /* ruled lists, Activities, Methods line */
+  --rail-width: 380px; /* "The problem" rail (also hardcoded on sibling pages) */
+  --diagram-size: 400px; /* panel diagram outer square */
+  --swatch-size: 44px; /* diagram legend swatches + "45" box */
+}
+
+/* ------------------------------------------------------------------------ */
+
 .section {
   width: 100%;
   display: flex;
   justify-content: center;
   padding: var(--space-12) 0 var(--space-13);
-}
-
-.borderBottom {
-  border-bottom: 1px solid var(--line-strong);
+  /* Seam: 1px section divider, same treatment as before */
+  border-bottom: var(--stroke-hairline) solid var(--line-strong);
 }
 
 .bgPanel {
@@ -20,22 +58,86 @@
 .inner {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: var(--space-7);
 }
 
-.sectionTitle {
+/* --- Type ---------------------------------------------------------------- */
+
+.h2 {
   font-family: var(--font-display), sans-serif;
   font-weight: 700;
-  font-size: 40px;
-  line-height: 46px;
-  letter-spacing: -0.8px;
+  font-size: var(--type-heading-xl-size);
+  line-height: var(--type-heading-xl-line);
+  letter-spacing: var(--type-heading-xl-track);
   color: var(--ink);
-  max-width: 700px;
 }
 
-/* --- Built from the bottom up --- */
+.h3 {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 700;
+  font-size: var(--type-heading-l-size);
+  line-height: var(--type-heading-l-line);
+  letter-spacing: var(--type-heading-l-track);
+  color: var(--ink);
+}
+
+.lede {
+  font-family: var(--font-body), sans-serif;
+  font-size: var(--type-lede-size);
+  line-height: var(--type-lede-line);
+  color: var(--ink);
+  max-width: var(--measure-prose);
+}
 
 .prose {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: var(--measure-prose);
+  font-family: var(--font-body), sans-serif;
+  font-size: var(--type-prose-size);
+  line-height: var(--type-prose-line);
+  color: var(--ink);
+}
+
+.proseWide {
+  max-width: var(--measure-wide);
+}
+
+.wide {
+  width: 100%;
+  max-width: var(--measure-wide);
+}
+
+.caption {
+  font-family: var(--font-body), sans-serif;
+  font-size: var(--type-caption-size);
+  line-height: var(--type-caption-line);
+  color: var(--muted);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.methodsLabel {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* External FigJam links: persistent underline, so no .link-underline.
+   Focus ring comes from the global a:focus-visible rule. */
+.featureLink {
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: var(--space-0);
+}
+
+/* --- The problem (rail + body) ----------------------------------------- */
+
+.railRow {
   display: flex;
   gap: var(--space-10);
   align-items: flex-start;
@@ -46,128 +148,88 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
-  width: 380px;
+  width: var(--rail-width);
   flex-shrink: 0;
 }
 
 .railLabel {
   font-family: var(--font-display), sans-serif;
   font-weight: 700;
-  font-size: 15px;
-  letter-spacing: 2.1px;
+  font-size: var(--type-section-label-size);
+  letter-spacing: var(--type-section-label-track);
+  text-transform: uppercase;
   color: var(--ink);
   border-bottom: var(--stroke-rule) solid var(--ink);
   padding-bottom: var(--space-3);
   width: 100%;
 }
 
-.railIntro {
-  font-family: var(--font-body), sans-serif;
-  font-size: 16px;
-  line-height: 26px;
-  color: var(--muted);
-}
+/* --- Two-column rows (My role, Research) -------------------------------- */
 
-.body {
-  flex: 1;
-  min-width: 0;
+.twoCol {
   display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-  color: var(--ink);
-}
-
-.lede {
-  font-family: var(--font-body), sans-serif;
-  font-size: 21px;
-  line-height: 33px;
-}
-
-.bodyText {
-  font-family: var(--font-body), sans-serif;
-  font-size: 18px;
-  line-height: 30px;
-}
-
-.mutedText {
-  font-family: var(--font-body), sans-serif;
-  font-size: 18px;
-  line-height: 30px;
-  color: var(--muted);
-}
-
-/* --- A community of passionate voices --- */
-
-.intro {
-  font-family: var(--font-body), sans-serif;
-  font-size: 18px;
-  line-height: 30px;
-  color: var(--muted);
-  max-width: 640px;
-}
-
-/* --- Activities in rotation --- */
-
-.activities {
-  font-family: var(--font-body), sans-serif;
-  font-size: 18px;
-  line-height: 30px;
-  color: var(--muted);
-  max-width: 760px;
-}
-
-.activitiesLabel {
-  font-weight: 700;
-  color: var(--ink);
-}
-
-.planningWrap {
-  max-width: 760px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-}
-
-.planningCaption {
-  font-family: var(--font-body), sans-serif;
-  font-size: 14px;
-  line-height: 21px;
-  color: var(--muted);
-  max-width: 760px;
-}
-
-/* --- What changed --- */
-
-.attributionRow {
-  display: flex;
-  gap: var(--space-8);
+  gap: var(--space-7);
   align-items: flex-start;
   width: 100%;
 }
 
-.attributionText {
-  flex: 1;
-  min-width: 0;
-  font-family: var(--font-body), sans-serif;
-  font-size: 18px;
-  line-height: 30px;
-  color: var(--muted);
+.twoColWide {
+  gap: var(--space-10);
 }
 
-.attributionAside {
+.col {
   flex: 1;
   min-width: 0;
+}
+
+/* Research: diagram sits in the pull-statement card */
+.pullCard {
+  background: var(--surface);
+  border-left: var(--stroke-emphasis) solid var(--accent);
+  border-radius: var(--radius-card);
+  padding: var(--space-7);
+}
+
+/* --- Journey map image slot --------------------------------------------- */
+
+.mapFrame {
+  position: relative;
+  width: 100%;
+  border: var(--stroke-card) solid var(--line-strong);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.mapImage {
+  object-fit: contain;
+}
+
+.figure {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  width: 100%;
+  margin: 0;
+}
+
+/* --- Results ------------------------------------------------------------- */
+
+.asideWrap {
+  width: 100%;
+  max-width: var(--measure-wide);
 }
 
 @media (max-width: 900px) {
-  .prose {
+  .railRow,
+  .twoCol {
     flex-direction: column;
   }
-  .rail {
+  .rail,
+  .col {
     width: 100%;
   }
-  .attributionRow {
-    flex-direction: column;
+  .pullCard {
+    padding: var(--space-4);
   }
 }
